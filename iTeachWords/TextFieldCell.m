@@ -16,7 +16,7 @@
 @synthesize delegate;
 
 - (void)dealloc {
-	[textField release]
+	[textField release];
     [titleLabel release];
     [super dealloc];
 }
