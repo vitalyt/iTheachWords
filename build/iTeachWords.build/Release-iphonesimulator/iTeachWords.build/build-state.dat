@@ -5,10 +5,8 @@ cCheck dependencies
 cProcessInfoPlistFile /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Info.plist iTeachWords/iTeachWords-Info.plist
 cDataModelVersionCompile /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/iTeachWordsDataModel.momd /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/iTeachWordsDataModel.xcdatamodeld
 cProcessPCH /var/folders/d1/d1Xvx0YoEkaKhMnH2WXT2++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iTeachWords-Prefix-fhjncttulhnrbodaazluyanwubkn/iTeachWords-Prefix.pch.gch iTeachWords/iTeachWords-Prefix.pch normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/NSObject+SBJSON.o /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/NSObject+SBJSON.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/TextFieldCell.o /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/TextFieldCell.m normal i386 objective-c com.apple.compilers.llvmgcc42
-cCompileC build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/main.o /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/main.m normal i386 objective-c com.apple.compilers.llvmgcc42
 cCompileC build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/iTeachWordsAppDelegate.o /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/iTeachWordsAppDelegate.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/main.o /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/main.m normal i386 objective-c com.apple.compilers.llvmgcc42
 cCompileC build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/iTeachWordsViewController.o /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/iTeachWordsViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
 cCompileC build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/TableViewController.o /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/TableViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
 cCompileC build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/NSManagedObjectContext+Interaction.o /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/NSManagedObjectContext+Interaction.m normal i386 objective-c com.apple.compilers.llvmgcc42
@@ -48,6 +46,7 @@ cCompileC build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Obje
 cCompileC build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/SearchTableViewController.o /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/SearchTableViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
 cCompileC build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/DictionaryViewController.o /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/DictionaryViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
 cCompileC build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/LoadingViewController.o /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/LoadingViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/NSObject+SBJSON.o /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/NSObject+SBJSON.m normal i386 objective-c com.apple.compilers.llvmgcc42
 cCompileC build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/NSString+SBJSON.o /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/NSString+SBJSON.m normal i386 objective-c com.apple.compilers.llvmgcc42
 cCompileC build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/SBJSON.o /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/SBJSON.m normal i386 objective-c com.apple.compilers.llvmgcc42
 cCompileC build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/SBJsonBase.o /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/SBJsonBase.m normal i386 objective-c com.apple.compilers.llvmgcc42
@@ -79,6 +78,7 @@ cCompileC build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Obje
 cCompileC build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/SettingsViewController.o /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/SettingsViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
 cCompileC build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/InputTableController.o /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/InputTableController.m normal i386 objective-c com.apple.compilers.llvmgcc42
 cCompileC build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/TextFieldLanguagesCell.o /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/TextFieldLanguagesCell.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/TextFieldCell.o /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/TextFieldCell.m normal i386 objective-c com.apple.compilers.llvmgcc42
 cCompileC build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/InfoViewController.o /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/InfoViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
 cCompileC build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/UIAlertView+Interaction.o /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/UIAlertView+Interaction.m normal i386 objective-c com.apple.compilers.llvmgcc42
 cCompileC build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/NSString+Interaction.o /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/NSString+Interaction.m normal i386 objective-c com.apple.compilers.llvmgcc42
@@ -547,11 +547,11 @@ t1316156255
 s23336
 
 N/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app
-t1322553629
+t1322555408
 s10302
 
 N/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app.dSYM
-t1322553624
+t1322555408
 s102
 
 N/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/AD.png
@@ -1759,7 +1759,7 @@ t1322553626
 s37540
 
 N/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/iTeachWords
-t1322553624
+t1322555408
 s546000
 
 N/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/iTeachWordsDataModel.mom
@@ -2035,7 +2035,7 @@ t1322553597
 s49088
 
 N/Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/TextFieldCell.o
-t1322553623
+t1322555407
 s47680
 
 N/Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/TextFieldLanguagesCell.o
@@ -5090,7 +5090,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies73daaf8ecf84b441^1a30b08ecf84b441^-968"[WARN]Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Pause 16x16.png[WARN]Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Play 16x16.png[WARN]Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Record 16x16.png[WARN]Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Voice 24x24.png[WARN]Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/CountryNameCode.txt[WARN]Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/CountryNameCode.txt6(21%IDEActivityLogMessage2@153"Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Pause 16x16.png-344248206#18446744073709551615#0#-1#-----2@152"Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Play 16x16.png-344248206#18446744073709551615#0#-1#-----2@154"Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Record 16x16.png-344248206#18446744073709551615#0#-1#-----2@153"Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Voice 24x24.png-344248206#18446744073709551615#0#-1#-----2@157"Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/CountryNameCode.txt-344248206#18446744073709551615#0#-1#-----2@157"Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/CountryNameCode.txt-344248206#18446744073709551615#0#-1#-----0#1#0#--18"Check dependencies36"30DA0ED4-A2FC-4AEC-8BF8-104F2199A0CE-
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies7dea70a9d284b441^145933aad284b441^-968"[WARN]Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Pause 16x16.png[WARN]Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Play 16x16.png[WARN]Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Record 16x16.png[WARN]Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Voice 24x24.png[WARN]Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/CountryNameCode.txt[WARN]Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/CountryNameCode.txt6(21%IDEActivityLogMessage2@153"Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Pause 16x16.png-344249002#18446744073709551615#0#-1#-----2@152"Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Play 16x16.png-344249002#18446744073709551615#0#-1#-----2@154"Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Record 16x16.png-344249002#18446744073709551615#0#-1#-----2@153"Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Voice 24x24.png-344249002#18446744073709551615#0#-1#-----2@157"Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/CountryNameCode.txt-344249002#18446744073709551615#0#-1#-----2@157"Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/CountryNameCode.txt-344249002#18446744073709551615#0#-1#-----0#1#0#--18"Check dependencies36"5BC6DCC2-6E8B-4F66-81B8-4C1862404107-
 
 CCompileC build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/ARFontPickerViewController.o /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/ARFontPickerViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
 s344246423.794611
