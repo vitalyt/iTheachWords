@@ -27,7 +27,7 @@
 		[delegate performSelector:selector withObject:self];
 	}
 	return NO;
-}
+}   
  
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
 	SEL selector = @selector(cellChanged:);
