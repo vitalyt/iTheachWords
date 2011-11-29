@@ -13,6 +13,8 @@
     #import <Foundation/Foundation.h>
     #import <CoreData/CoreData.h>
     #import <QuartzCore/QuartzCore.h>
+
+    #import "TestFlight.h"
 #endif
 
 

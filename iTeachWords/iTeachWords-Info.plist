@@ -44,5 +44,7 @@
 	</array>
 	<key>FeedbackMailAddress</key>
 	<string>vitaly.todorovych@yandex.ru</string>
+	<key>TestTeamToken</key>
+	<string>8c5fde62f2d9d0623e6dab1f50fd0e94_NDQwMTYyMDExLTExLTI5IDA0OjMxOjAxLjE0NzgwNA</string>
 </dict>
 </plist>

@@ -40,6 +40,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    // start of your application:didFinishLaunchingWithOptions 
+    // ...
+    NSString *testTeamToken = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"TestTeamToken"];
+    NSLog(@"TestTeamToken is %@",testTeamToken);
+    [TestFlight takeOff:testTeamToken];
+    // The rest of your application:didFinishLaunchingWithOptions method
+
+    
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:YES];
     player = [[MyPlayer alloc] initWithNibName:@"MyPlayer" bundle:nil];
     [self checkDatabase];

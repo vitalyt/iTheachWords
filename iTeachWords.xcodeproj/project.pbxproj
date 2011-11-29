@@ -48,6 +48,7 @@
 		281F8907139E0B5100431DAD /* WBConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 281F8902139E0B5100431DAD /* WBConnection.m */; };
 		281F8908139E0B5100431DAD /* WBEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 281F8904139E0B5100431DAD /* WBEngine.m */; };
 		281F8909139E0B5100431DAD /* WBRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 281F8906139E0B5100431DAD /* WBRequest.m */; };
+		2821ECC81484DF1B0025621D /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2821ECC61484DF1B0025621D /* libTestFlight.a */; };
 		28296B0E13812C2F000129E8 /* NSManagedObjectContext+Interaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 28296B0D13812C2F000129E8 /* NSManagedObjectContext+Interaction.m */; };
 		28296B1013812C81000129E8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28296B0F13812C81000129E8 /* CoreData.framework */; };
 		28296B1213812C99000129E8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28296B1113812C99000129E8 /* QuartzCore.framework */; };
@@ -468,6 +469,8 @@
 		281F8904139E0B5100431DAD /* WBEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBEngine.m; sourceTree = "<group>"; };
 		281F8905139E0B5100431DAD /* WBRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBRequest.h; sourceTree = "<group>"; };
 		281F8906139E0B5100431DAD /* WBRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBRequest.m; sourceTree = "<group>"; };
+		2821ECC61484DF1B0025621D /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		2821ECC71484DF1B0025621D /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		28296B0C13812C2F000129E8 /* NSManagedObjectContext+Interaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+Interaction.h"; sourceTree = "<group>"; };
 		28296B0D13812C2F000129E8 /* NSManagedObjectContext+Interaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+Interaction.m"; sourceTree = "<group>"; };
 		28296B0F13812C81000129E8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -910,6 +913,7 @@
 				28296B1013812C81000129E8 /* CoreData.framework in Frameworks */,
 				282EAF31139E0DAB0057F316 /* SystemConfiguration.framework in Frameworks */,
 				284092CE1381242700864711 /* Foundation.framework in Frameworks */,
+				2821ECC81484DF1B0025621D /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1042,6 +1046,15 @@
 				281F88F4139E0B3300431DAD /* SBJsonWriter.m */,
 			);
 			name = JSON;
+			sourceTree = "<group>";
+		};
+		2821ECC41484DED80025621D /* TestFlight */ = {
+			isa = PBXGroup;
+			children = (
+				2821ECC61484DF1B0025621D /* libTestFlight.a */,
+				2821ECC71484DF1B0025621D /* TestFlight.h */,
+			);
+			name = TestFlight;
 			sourceTree = "<group>";
 		};
 		28296B1913812EDC000129E8 /* Views */ = {
@@ -1255,7 +1268,6 @@
 		284092BC1381242700864711 = {
 			isa = PBXGroup;
 			children = (
-				28BDB6931483880300BC2688 /* iAd.framework */,
 				284092D11381242700864711 /* iTeachWords */,
 				284092CA1381242700864711 /* Frameworks */,
 				284092C81381242700864711 /* Products */,
@@ -1273,6 +1285,7 @@
 		284092CA1381242700864711 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				28BDB6931483880300BC2688 /* iAd.framework */,
 				28C61F2A146BDD790065E75A /* CoreGraphics.framework */,
 				28C61F28146BDD6C0065E75A /* UIKit.framework */,
 				28C61F26146BDD5D0065E75A /* AVFoundation.framework */,
@@ -1290,6 +1303,7 @@
 		284092D11381242700864711 /* iTeachWords */ = {
 			isa = PBXGroup;
 			children = (
+				2821ECC41484DED80025621D /* TestFlight */,
 				281F88E5139E0ADA00431DAD /* Network */,
 				282A3BCA1385234500F7D68E /* Player */,
 				28296B20138132E5000129E8 /* Update */,
@@ -2369,6 +2383,49 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2821ECC91484E9FC0025621D /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Edwin Zuydendorp (SJPR779W7G)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "868C6808-4ECB-4275-802E-C52F04A097BC";
+				SDKROOT = macosx;
+			};
+			name = Distribution;
+		};
+		2821ECCA1484E9FC0025621D /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: OSDN BV";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iTeachWords/iTeachWords-Prefix.pch";
+				INFOPLIST_FILE = "iTeachWords/iTeachWords-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/iTeachWords\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CA102DA7-C922-4719-A2F7-596966A00A82";
+				SDKROOT = iphoneos4.0;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Distribution;
+		};
 		284092E61381242700864711 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2418,6 +2475,10 @@
 				INFOPLIST_FILE = "iTeachWords/iTeachWords-Info.plist";
 				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/iTeachWords\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F92D867A-6A82-43A0-9BDF-A94E001ADE35";
 				SDKROOT = iphoneos4.0;
@@ -2440,6 +2501,10 @@
 				INFOPLIST_FILE = "iTeachWords/iTeachWords-Info.plist";
 				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/iTeachWords\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F92D867A-6A82-43A0-9BDF-A94E001ADE35";
 				SDKROOT = iphoneos4.0;
@@ -2456,6 +2521,7 @@
 			buildConfigurations = (
 				284092E61381242700864711 /* Debug */,
 				284092E71381242700864711 /* Release */,
+				2821ECC91484E9FC0025621D /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2465,6 +2531,7 @@
 			buildConfigurations = (
 				284092E91381242700864711 /* Debug */,
 				284092EA1381242700864711 /* Release */,
+				2821ECCA1484E9FC0025621D /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
