@@ -21,6 +21,7 @@
     [super dealloc];
 }
 
+
 - (BOOL)textFieldDidEndEditing:(UITextField *)field {
 	SEL selector = @selector(cellDidEndEditing:);
 	if ([delegate respondsToSelector:selector]) {
