@@ -1,1 +1,9 @@
-build/*
+build/Release-iphonesimulator/iTeachWords.app/iTeachWords
+
+build/Release-iphonesimulator/iTeachWords.app/iTeachWords
+
+build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/build-state.dat
+
+build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/iTeachWords.dep
+
+iTeachWords.xcodeproj/project.xcworkspace/xcuserdata/edwinzuydendorp.xcuserdatad/UserInterfaceState.xcuserstate
