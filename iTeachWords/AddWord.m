@@ -88,29 +88,19 @@
     [super viewDidLoad];
     [self createMenu];
     [myTextFieldEng setFont:FONT_TEXT];
-    [myTextFieldRus setFont:FONT_TEXT];
-//   //[[NSNotificationCenter defaultCenter] 
-//                                        addObserver:self 
-//                                        selector:@selector(textFieldDidChange:)
-//                                        name:UITextFieldTextDidChangeNotification  
-//                                        object:myTextFieldEng];
+    [myTextFieldRus setFont:FONT_TEXT];    
+    myTextFieldEng.placeholder = [[NSUserDefaults standardUserDefaults] objectForKey:TRANSLATE_COUNTRY];
+    myTextFieldRus.placeholder = [[NSUserDefaults standardUserDefaults] objectForKey:NATIVE_COUNTRY];
     [myTextFieldEng addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     [myTextFieldRus addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];;
-//    [[NSNotificationCenter defaultCenter] 
-//                                        addObserver:self 
-//                                        selector:@selector(textFieldDidChange:)
-//                                        name:UITextFieldTextDidChangeNotification  
-//                                        object:myTextFieldRus];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(inputModeDidChange:)
                                                  name:@"UIKeyboardCurrentInputModeDidChangeNotification"
                                                object:nil];
-    [self loadData];
-    myTextFieldEng.placeholder = [[NSUserDefaults standardUserDefaults] objectForKey:TRANSLATE_COUNTRY];
-    myTextFieldRus.placeholder = [[NSUserDefaults standardUserDefaults] objectForKey:NATIVE_COUNTRY];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"grnd.png"]];
     self.navigationItem.titleView = (UIView *)myToolbarView;
 	[self setImageFlag];
+    [self loadData];
 }
 
 - (void)inputModeDidChange:(NSNotification*)notification
@@ -143,7 +133,7 @@
     myTransition.subtype = kCATransitionFromRight;
     [recordView.view.layer addAnimation:myTransition forKey:@"RECORDANIMATION"];
     SoundType sounType;
-    if (((UIButton *)sender).tag == 1) {
+    if (((UIButton *)sender).tag == 101) {
         if (!dataModel.currentWord.translate || [dataModel.currentWord.translate length] == 0) {
             [UIAlertView displayError:@"You must enter a word or choose a theme before recording."];
             return;
@@ -176,6 +166,8 @@
 }
 
 - (IBAction) showMyPickerView{
+    [myTextFieldRus resignFirstResponder];
+    [myTextFieldEng resignFirstResponder];
     if (myPicker) {
         [myPicker release];
     }
