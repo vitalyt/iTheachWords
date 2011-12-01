@@ -89,6 +89,18 @@
     [self createMenu];
     [myTextFieldEng setFont:FONT_TEXT];
     [myTextFieldRus setFont:FONT_TEXT];
+//   //[[NSNotificationCenter defaultCenter] 
+//                                        addObserver:self 
+//                                        selector:@selector(textFieldDidChange:)
+//                                        name:UITextFieldTextDidChangeNotification  
+//                                        object:myTextFieldEng];
+    [myTextFieldEng addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
+    [myTextFieldRus addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];;
+//    [[NSNotificationCenter defaultCenter] 
+//                                        addObserver:self 
+//                                        selector:@selector(textFieldDidChange:)
+//                                        name:UITextFieldTextDidChangeNotification  
+//                                        object:myTextFieldRus];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(inputModeDidChange:)
                                                  name:@"UIKeyboardCurrentInputModeDidChangeNotification"
@@ -156,9 +168,9 @@
 
 - (void) recordViewDidClose:(id)sender{
     if (((RecordingViewController *)sender).soundType == TRANSLATE) {
-        myTextFieldRus.frame = CGRectMake(myTextFieldRus.frame.origin.x, myTextFieldRus.frame.origin.y , 228, myTextFieldRus.frame.size.height);
+        myTextFieldRus.frame = CGRectMake(myTextFieldRus.frame.origin.x, myTextFieldRus.frame.origin.y , self.view.frame.size.width-22, myTextFieldRus.frame.size.height);
     }else{
-        myTextFieldEng.frame = CGRectMake(myTextFieldEng.frame.origin.x, myTextFieldEng.frame.origin.y , 228, myTextFieldEng.frame.size.height);
+        myTextFieldEng.frame = CGRectMake(myTextFieldEng.frame.origin.x, myTextFieldEng.frame.origin.y , self.view.frame.size.width-22, myTextFieldEng.frame.size.height);
     }
     
 }
@@ -254,12 +266,18 @@
 } 
 
 - (void)addRecButtonOnTextField:(UITextField*)textField{
-    UIButton *recButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, textField.frame.size.height - 10)];
-    [recButton addTarget:self action:@selector(recordPressed:) forControlEvents:UIControlEventTouchUpInside];
+    UIButton *recButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [recButton addTarget:self 
+               action:@selector(recordPressed:)
+     forControlEvents:UIControlEventTouchDown];
+    [recButton setImage:[UIImage imageNamed:@"Voice 24x24.png"] forState:UIControlStateNormal];
+    recButton.frame = CGRectMake(0.0, 0.0, 24, 24);
     [recButton setTag:textField.tag];
 	[textField setRightView:recButton];
 	[textField setRightViewMode:UITextFieldViewModeAlways];
-    [recButton release];
+    if ([textField.text length]==0) {
+        [recButton setEnabled:NO];
+    }
 }
 
 - (void)setWord:(Words *)_word{
@@ -335,6 +353,14 @@
 }
 
 
+- (void)textFieldDidChange:(UITextField*)textField {
+    UIButton *recButton = ((UIButton*)textField.rightView);
+    if ([textField.text length]==0) {
+        [recButton setEnabled:NO];
+    }else{
+        [recButton setEnabled:YES];
+    }
+}
 
 - (void) textFieldDidEndEditing:(UITextField *)textField{
     NSString *text = [NSString stringWithString:textField.text];
@@ -370,16 +396,8 @@
     
     NSString *selectedText = [myWebView stringByEvaluatingJavaScriptFromString:@"window.getSelection().toString()"];
     [myTextFieldRus setText:selectedText];
+    [self textFieldDidChange:myTextFieldRus];
     NSLog(@"%@",selectedText);
-//    if (range.length > 0) {
-//        NSMutableString *text = [NSMutableString stringWithString:myTextView.text];
-//        NSString *selectedWord = [text substringWithRange:range];
-//        NSLog(@"%@",selectedWord);
-//        NSString *translate = [selectedWord translateString];
-//        if (translate) {
-//            [UIAlertView displayMessage:translate];
-//        }
-//    }
 }
 
 - (void)dealloc {

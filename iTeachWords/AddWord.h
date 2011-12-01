@@ -55,4 +55,5 @@
 - (void)setTranslate:(NSString*)text;
 - (void)addRecButtonOnTextField:(UITextField*)textField;
 - (void)createMenu;
+- (void)textFieldDidChange:(UITextField*)textField;
 @end
