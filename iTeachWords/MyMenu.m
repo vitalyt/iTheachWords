@@ -19,6 +19,7 @@
 #import "LanguagePickerController.h"
 #import "SettingsViewController.h"
 #import "InfoViewController.h"
+#import "SpeachView.h"
 
 @implementation MyMenu
 
@@ -61,6 +62,10 @@
 
 - (void) viewDidLoad{
     [super viewDidLoad];
+//    SpeachView *viewSpeach = [[SpeachView alloc] initWithFrame:CGRectMake(50, 50, 200, 80)];
+//    [viewSpeach setBackgroundColor:[UIColor clearColor]];
+//    [self.view addSubview:viewSpeach];
+//    [viewSpeach release];
     table.allowsSelectionDuringEditing = YES;
     [self addInfoButton];
 }

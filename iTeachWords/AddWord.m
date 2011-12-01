@@ -86,6 +86,7 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self createMenu];
     [myTextFieldEng setFont:FONT_TEXT];
     [myTextFieldRus setFont:FONT_TEXT];
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -234,7 +235,8 @@
 }
 
 - (void) setImageFlag{
-    
+    [self addRecButtonOnTextField:myTextFieldEng];
+    [self addRecButtonOnTextField:myTextFieldRus];
     NSString *path = [NSString stringWithFormat:@"%@.png", [[NSUserDefaults standardUserDefaults] objectForKey:TRANSLATE_COUNTRY_CODE]];
 	UIImageView *objImageEng = [[UIImageView alloc]initWithImage:[UIImage imageNamed:path]];
     [objImageEng setFrame:CGRectMake(0.0, 0.0, 20, 20)];
@@ -250,6 +252,15 @@
 	[objImageRus release];
 	[objImageEng release];
 } 
+
+- (void)addRecButtonOnTextField:(UITextField*)textField{
+    UIButton *recButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, textField.frame.size.height - 10)];
+    [recButton addTarget:self action:@selector(recordPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [recButton setTag:textField.tag];
+	[textField setRightView:recButton];
+	[textField setRightViewMode:UITextFieldViewModeAlways];
+    [recButton release];
+}
 
 - (void)setWord:(Words *)_word{
     [dataModel setWord:_word];
@@ -336,6 +347,39 @@
     }else if (textField == myTextFieldRus) {
         [dataModel.currentWord setTranslate:text];
     }
+}
+
+
+- (void)createMenu{
+    [self becomeFirstResponder];
+    NSMutableArray *menuItemsMutableArray = [NSMutableArray new];
+    UIMenuItem *menuItem = [[[UIMenuItem alloc] initWithTitle:@"use as translate"
+                                                       action:@selector(parceTranslateWord)] autorelease];
+    [menuItemsMutableArray addObject:menuItem];
+    UIMenuController *menuController = [UIMenuController sharedMenuController];
+    [menuController setTargetRect: CGRectMake(0, 0, 320, 200)
+                           inView:self.view];
+    menuController.menuItems = menuItemsMutableArray;
+    [menuController setMenuVisible:YES
+                          animated:YES];
+    [[UIMenuController sharedMenuController] setMenuItems:menuItemsMutableArray];
+    [menuItemsMutableArray release];
+}
+
+- (void)parceTranslateWord{
+    
+    NSString *selectedText = [myWebView stringByEvaluatingJavaScriptFromString:@"window.getSelection().toString()"];
+    [myTextFieldRus setText:selectedText];
+    NSLog(@"%@",selectedText);
+//    if (range.length > 0) {
+//        NSMutableString *text = [NSMutableString stringWithString:myTextView.text];
+//        NSString *selectedWord = [text substringWithRange:range];
+//        NSLog(@"%@",selectedWord);
+//        NSString *translate = [selectedWord translateString];
+//        if (translate) {
+//            [UIAlertView displayMessage:translate];
+//        }
+//    }
 }
 
 - (void)dealloc {

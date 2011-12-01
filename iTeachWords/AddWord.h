@@ -53,4 +53,6 @@
 - (void)setWord:(Words *)_word;
 - (void)setText:(NSString*)text;
 - (void)setTranslate:(NSString*)text;
+- (void)addRecButtonOnTextField:(UITextField*)textField;
+- (void)createMenu;
 @end

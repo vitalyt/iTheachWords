@@ -23,7 +23,7 @@
     if (self) {
         // Custom initialization
         self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] 
-                                                   initWithTitle:@"Parse text" style:UIBarButtonSystemItemCompose 
+                                                   initWithTitle:@"Parse text" style:UIBarButtonItemStyleBordered 
                                                    target:self 
                                                    action:@selector(showTable)] autorelease];
         [self createMenu];
@@ -62,12 +62,6 @@
 
 - (IBAction) showTable{
 	[self saveText];
-//    CATransition* transition = [CATransition animation];
-//    transition.duration = 0.3;
-//    transition.type = kCATransitionPush;
-//    transition.subtype = kCATransitionFromTop;
-//    [self.navigationController.view.layer removeAllAnimations];
-//    [self.navigationController.view.layer addAnimation:transition forKey:kCATransition];
 	NewWordsTable *table = [[NewWordsTable alloc] initWithNibName:@"NewWordsTable" bundle:nil];
     [self.navigationController pushViewController:table animated:YES];
     [table loadDataWithString:myTextView.text];

@@ -131,6 +131,7 @@
 		28797B1E13A2355E00D21722 /* NewTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28797B1D13A2355D00D21722 /* NewTableCell.xib */; };
 		28797B3113A24CC700D21722 /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28797B3013A24CC700D21722 /* MenuView.m */; };
 		28A0882B1421CDBF00F292F9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 28A088291421CDBF00F292F9 /* Localizable.strings */; };
+		28A194A114862FDD005B343A /* SpeachView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A194A014862FDD005B343A /* SpeachView.m */; };
 		28BA996F138E753100311400 /* TestOrthography.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BA996D138E753100311400 /* TestOrthography.m */; };
 		28BDB691148387C500BC2688 /* BannerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BDB690148387C500BC2688 /* BannerTableViewController.m */; };
 		28BDB6941483880300BC2688 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BDB6931483880300BC2688 /* iAd.framework */; };
@@ -590,6 +591,8 @@
 		28797B3013A24CC700D21722 /* MenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuView.m; sourceTree = "<group>"; };
 		28A0882A1421CDBF00F292F9 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		28A0882C1421CE2000F292F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		28A1949F14862FDD005B343A /* SpeachView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeachView.h; sourceTree = "<group>"; };
+		28A194A014862FDD005B343A /* SpeachView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeachView.m; sourceTree = "<group>"; };
 		28BA996C138E753100311400 /* TestOrthography.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestOrthography.h; sourceTree = "<group>"; };
 		28BA996D138E753100311400 /* TestOrthography.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestOrthography.m; sourceTree = "<group>"; };
 		28BDB68F148387C500BC2688 /* BannerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerTableViewController.h; sourceTree = "<group>"; };
@@ -1105,6 +1108,8 @@
 				28797B3013A24CC700D21722 /* MenuView.m */,
 				28296B2713813352000129E8 /* MyUIViewClass.h */,
 				28296B2813813352000129E8 /* MyUIViewClass.m */,
+				28A1949F14862FDD005B343A /* SpeachView.h */,
+				28A194A014862FDD005B343A /* SpeachView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -2323,6 +2328,7 @@
 				28C61F23146BDBEC0065E75A /* NSString+Interaction.m in Sources */,
 				282FEDD6147F813B0065A2F9 /* ARFontPickerViewController.m in Sources */,
 				28BDB691148387C500BC2688 /* BannerTableViewController.m in Sources */,
+				28A194A114862FDD005B343A /* SpeachView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
