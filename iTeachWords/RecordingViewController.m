@@ -70,12 +70,17 @@
 
 - (IBAction) saveSound {
     NSData *data = [[NSData alloc]initWithContentsOfURL:recordedTmpFile];
-    [currentSound setData:data];
+    NSLog(@"%@",data);
+    if (data && [data length]>0) {
+        [currentSound setData:data];
+    }
+    
 //    NSError *_error;
 //    if (![CONTEXT save:&_error]) {
 //        [UIAlertView displayError:@"Data is not saved."];
 //    }
     [data release];
+    data = nil;
     [self.view removeFromSuperview];
     if ((self.delegate)&&([self.delegate respondsToSelector:@selector(recordViewDidClose:)])) {
 		[self.delegate recordViewDidClose:self];
@@ -218,7 +223,8 @@
     [activityIndicatorView stopAnimating];
 
     NSData *value = [connection data];
-    if (value) {
+    NSLog(@"%@",value);
+    if (value && [value length]>0) {
         if (!recordedTmpFile) {
             [self createRecirdingFile:nil];
         }

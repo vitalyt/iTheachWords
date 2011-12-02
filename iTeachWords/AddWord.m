@@ -25,6 +25,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
         self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc]
                                                   initWithTitle:@"Back" style:UIBarButtonItemStyleBordered
                                                   target:self action:@selector(back)] autorelease];
@@ -52,6 +53,7 @@
         NSArray *types = [fetches fetchedObjects];
         if (types && [types count]>0) {
             dataModel.wordType = [[types objectAtIndex:0] retain];
+            [self setThemeName];
             myPickerLabel.text = dataModel.wordType.name;    
             [dataModel createWord];
             if (dataModel.currentWord) {
@@ -67,6 +69,8 @@
         editingWord = YES;
         myTextFieldEng.text = dataModel.currentWord.text;
         myTextFieldRus.text = dataModel.currentWord.translate;
+        [self textFieldDidChange:myTextFieldEng];
+        [self textFieldDidChange:myTextFieldRus];
         myPickerLabel.text = dataModel.wordType.name;
     }
 }
@@ -75,6 +79,7 @@
     [dataModel createWord];
     myTextFieldEng.text = text;
     [dataModel.currentWord setText:text];
+    [self textFieldDidChange:myTextFieldEng];
 }
 
 - (void)setTranslate:(NSString*)text{
@@ -86,13 +91,14 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     [self createMenu];
     [myTextFieldEng setFont:FONT_TEXT];
     [myTextFieldRus setFont:FONT_TEXT];    
     myTextFieldEng.placeholder = [[NSUserDefaults standardUserDefaults] objectForKey:TRANSLATE_COUNTRY];
     myTextFieldRus.placeholder = [[NSUserDefaults standardUserDefaults] objectForKey:NATIVE_COUNTRY];
     [myTextFieldEng addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
-    [myTextFieldRus addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];;
+    [myTextFieldRus addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(inputModeDidChange:)
                                                  name:@"UIKeyboardCurrentInputModeDidChangeNotification"
@@ -120,49 +126,41 @@
 - (IBAction) recordPressed:(id)sender{
     //[sender setHidden:YES];
     [self closeAllKeyboard];
+    SoundType sounType;
+    UITextField *currentTextField;
+    if (((UIButton *)sender).tag == 101) {
+        currentTextField = myTextFieldRus;
+        if (!dataModel.currentWord.translate || [dataModel.currentWord.translate length] == 0) {
+            [UIAlertView displayError:@"You must enter a word or choose a theme before recording."];
+            return;
+        }
+        sounType = TRANSLATE;
+    }else{
+        currentTextField = myTextFieldEng;
+        if (!dataModel.currentWord.text || [dataModel.currentWord.text length] == 0) {
+            [UIAlertView displayError:@"You must enter a word before recording."];
+            return;
+        }
+        sounType = TEXT;
+    }
     if (recordView) {
         [recordView saveSound];
         [recordView release];
     }
     recordView = [[RecordingViewController alloc] initWithNibName:@"RecordFullView" bundle:nil] ;
     recordView.delegate = self;
-    CATransition *myTransition = [CATransition animation];
-	myTransition.timingFunction = UIViewAnimationCurveEaseInOut;
-	myTransition.type = kCATransitionPush; 
-	myTransition.duration = 0.2;
-    myTransition.subtype = kCATransitionFromRight;
-    [recordView.view.layer addAnimation:myTransition forKey:@"RECORDANIMATION"];
-    SoundType sounType;
-    if (((UIButton *)sender).tag == 101) {
-        if (!dataModel.currentWord.translate || [dataModel.currentWord.translate length] == 0) {
-            [UIAlertView displayError:@"You must enter a word or choose a theme before recording."];
-            return;
-        }
-        sounType = TRANSLATE;
-        recordView.view.frame = CGRectMake(67, 88, 243, 40);
-        myTextFieldRus.frame = CGRectMake(myTextFieldRus.frame.origin.x, myTextFieldRus.frame.origin.y , 48, myTextFieldRus.frame.size.height);
-    }else{
-        if (!dataModel.currentWord.text || [dataModel.currentWord.text length] == 0) {
-            [UIAlertView displayError:@"You must enter a word before recording."];
-            return;
-        }
-        sounType = TEXT;
-        recordView.view.frame = CGRectMake(67, 48, 243, 40);
-        myTextFieldEng.frame = CGRectMake(myTextFieldEng.frame.origin.x, myTextFieldEng.frame.origin.y , 48, myTextFieldEng.frame.size.height);
-    }
+    [self.view addSubview:recordView.view];
+    [recordView.view setFrame:CGRectMake(currentTextField.frame.origin.x+currentTextField.frame.size.width-currentTextField.rightView.frame.size.width, currentTextField.frame.origin.y, currentTextField.rightView.frame.size.width, currentTextField.rightView.frame.size.height)];
     recordView.soundType = sounType;
     [recordView setWord:dataModel.currentWord withType:sounType];
-
-    [self.view addSubview:recordView.view];
+    [UIView beginAnimations:@"MoveAndStrech" context:nil];
+    [UIView setAnimationDuration:0.3];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    [recordView.view setFrame:CGRectMake(self.view.center.x-125/2, self.view.center.y-125/2, 125, 125)];
+    [UIView commitAnimations];
 }
 
 - (void) recordViewDidClose:(id)sender{
-    if (((RecordingViewController *)sender).soundType == TRANSLATE) {
-        myTextFieldRus.frame = CGRectMake(myTextFieldRus.frame.origin.x, myTextFieldRus.frame.origin.y , self.view.frame.size.width-22, myTextFieldRus.frame.size.height);
-    }else{
-        myTextFieldEng.frame = CGRectMake(myTextFieldEng.frame.origin.x, myTextFieldEng.frame.origin.y , self.view.frame.size.width-22, myTextFieldEng.frame.size.height);
-    }
-    
 }
 
 - (IBAction) showMyPickerView{
@@ -181,6 +179,7 @@
     dataModel.wordType = _wordType;
     [dataModel createWord];
     myPickerLabel.text = dataModel.wordType.name;
+    [self setThemeName];
     if (dataModel.currentWord) {
         [dataModel.currentWord setType:dataModel.wordType];
         [dataModel.currentWord setTypeID:dataModel.wordType.typeID];
@@ -196,6 +195,7 @@
 
 - (void) back{
 	if (flgSave) {
+        self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
         [self.navigationController popViewControllerAnimated:YES];
 	}
 	else {
@@ -214,11 +214,17 @@
         if (!editingWord) {
             [dataModel.wordType removeWordsObject:dataModel.currentWord];
         }
+        
+        self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
         [self.navigationController popViewControllerAnimated:YES];
 	}
 	else if (buttonIndex == 0){
 		return;
 	}
+}
+
+- (void)setThemeName{
+    [self.navigationItem setPrompt:[NSString stringWithFormat:@"Current theme is %@",dataModel.wordType.name]];
 }
 
 - (IBAction) save
@@ -284,6 +290,7 @@
 - (IBAction) loadWebView
 {
     if ([iTeachWordsAppDelegate isNetwork]) {
+        [loadWebButtonView setHidden:YES];
         [self closeAllKeyboard];
         [dataModel createUrls];
         [self loadTranslateTextFromServer];
@@ -317,12 +324,12 @@
         myTextFieldRus.text = [[result objectForKey:@"responseData"] objectForKey:@"translatedText"];
         [self textFieldDidEndEditing:myTextFieldRus];
 	}else{
-        UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"", @"") 
-                                                         message:@"Error connection" 
-                                                        delegate:self 
-                                               cancelButtonTitle:NSLocalizedString(@"OK", @"") 
-                                               otherButtonTitles: nil] autorelease];
-        [alert show];
+//        UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"", @"") 
+//                                                         message:@"Error connection" 
+//                                                        delegate:self 
+//                                               cancelButtonTitle:NSLocalizedString(@"OK", @"") 
+//                                               otherButtonTitles: nil] autorelease];
+//        [alert show];
     }
     [result release];
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
@@ -346,6 +353,7 @@
 
 
 - (void)textFieldDidChange:(UITextField*)textField {
+    [loadWebButtonView setHidden:NO];
     UIButton *recButton = ((UIButton*)textField.rightView);
     if ([textField.text length]==0) {
         [recButton setEnabled:NO];
@@ -389,6 +397,7 @@
     NSString *selectedText = [myWebView stringByEvaluatingJavaScriptFromString:@"window.getSelection().toString()"];
     [myTextFieldRus setText:selectedText];
     [self textFieldDidChange:myTextFieldRus];
+    [dataModel.currentWord setTranslate:selectedText];
     NSLog(@"%@",selectedText);
 }
 
@@ -407,8 +416,14 @@
         [wbEngine release];
     }
     [dataModel release];
+    [loadWebButtonView release];
     [super dealloc];
 }
 
 
+- (void)viewDidUnload {
+    [loadWebButtonView release];
+    loadWebButtonView = nil;
+    [super viewDidUnload];
+}
 @end

@@ -22,7 +22,7 @@
 	IBOutlet UITextField	*myTextFieldEng,*myTextFieldRus;
     IBOutlet MyUIViewClass  *myToolbarView;
     IBOutlet UIButton       *recordButtonView;
-	IBOutlet UIActivityIndicatorView * actSpinner;
+    IBOutlet UIView         *loadWebButtonView;
 	MyPickerViewContrller	*myPicker;
     RecordingViewController *recordView;
     
@@ -56,4 +56,6 @@
 - (void)addRecButtonOnTextField:(UITextField*)textField;
 - (void)createMenu;
 - (void)textFieldDidChange:(UITextField*)textField;
+- (void)setThemeName;
+
 @end
