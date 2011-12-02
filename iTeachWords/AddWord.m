@@ -156,7 +156,7 @@
     [UIView beginAnimations:@"MoveAndStrech" context:nil];
     [UIView setAnimationDuration:0.3];
     [UIView setAnimationBeginsFromCurrentState:YES];
-    [recordView.view setFrame:CGRectMake(self.view.center.x-125/2, self.view.center.y-125/2, 125, 125)];
+    [recordView.view setFrame:CGRectMake(self.view.center.x-105/2, self.view.center.y-105/2, 105, 105)];
     [UIView commitAnimations];
 }
 

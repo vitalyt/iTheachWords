@@ -151,8 +151,8 @@ cCpResource "iTeachWords/Radio 24x24.png" "build/Release-iphonesimulator/iTeachW
 cCpResource "iTeachWords/Wrong 24x24.png" "build/Release-iphonesimulator/iTeachWords.app/Wrong 24x24.png"
 cCpResource "iTeachWords/Record 24x24.png" "build/Release-iphonesimulator/iTeachWords.app/Record 24x24.png"
 cCpResource "iTeachWords/Stop 24x24.png" "build/Release-iphonesimulator/iTeachWords.app/Stop 24x24.png"
-cCpResource "iTeachWords/Check 24x24.png" "build/Release-iphonesimulator/iTeachWords.app/Check 24x24.png"
 cCpResource "iTeachWords/Play 24x24.png" "build/Release-iphonesimulator/iTeachWords.app/Play 24x24.png"
+cCpResource "iTeachWords/Check 24x24.png" "build/Release-iphonesimulator/iTeachWords.app/Check 24x24.png"
 cCompileXIB /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/NewTableCell.xib
 cCompileXIB /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/LMTableViewController.xib
 cCompileXIB /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/LM7.xib
@@ -309,8 +309,8 @@ cCpResource iTeachWords/Flags/MY.png build/Release-iphonesimulator/iTeachWords.a
 cCpResource iTeachWords/Flags/MZ.png build/Release-iphonesimulator/iTeachWords.app/MZ.png
 cCpResource iTeachWords/Flags/NA.png build/Release-iphonesimulator/iTeachWords.app/NA.png
 cCpResource iTeachWords/Flags/NC.png build/Release-iphonesimulator/iTeachWords.app/NC.png
-cCpResource iTeachWords/Flags/NE.png build/Release-iphonesimulator/iTeachWords.app/NE.png
 cCpResource iTeachWords/Flags/NG.png build/Release-iphonesimulator/iTeachWords.app/NG.png
+cCpResource iTeachWords/Flags/NE.png build/Release-iphonesimulator/iTeachWords.app/NE.png
 cCpResource iTeachWords/Flags/NI.png build/Release-iphonesimulator/iTeachWords.app/NI.png
 cCpResource iTeachWords/Flags/NL.png build/Release-iphonesimulator/iTeachWords.app/NL.png
 cCpResource iTeachWords/Flags/NO.png build/Release-iphonesimulator/iTeachWords.app/NO.png
@@ -548,11 +548,11 @@ t1316156255
 s23336
 
 N/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app
-t1322824253
+t1322828984
 s10302
 
 N/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app.dSYM
-t1322824253
+t1322825643
 s102
 
 N/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/AD.png
@@ -1396,8 +1396,8 @@ t1322553626
 s221
 
 N/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Play 24x24.png
-t1322553628
-s263
+t1322825644
+s6131
 
 N/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/QA.png
 t1322553628
@@ -1420,20 +1420,20 @@ t1322553628
 s1614
 
 N/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Radio 24x24.png
-t1322553628
-s621
+t1322825644
+s6240
 
 N/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Record 16x16.png
 t1322553626
 s248
 
 N/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Record 24x24.png
-t1322553628
-s314
+t1322825644
+s6174
 
 N/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/RecordFullView.nib
-t1322820207
-s2709
+t1322828984
+s3383
 
 N/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/RecordingViewController.nib
 t1322553626
@@ -1688,8 +1688,8 @@ t1322553626
 s1369
 
 N/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Wrong 24x24.png
-t1322553628
-s307
+t1322825644
+s6175
 
 N/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Y axis rotation copy 24x24.png
 t1322553626
@@ -1760,7 +1760,7 @@ t1322553626
 s37540
 
 N/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/iTeachWords
-t1322824253
+t1322825643
 s1203632
 
 N/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/iTeachWordsDataModel.mom
@@ -1784,8 +1784,8 @@ t1322561794
 s49068
 
 N/Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/AddWord.o
-t1322824253
-s117324
+t1322825640
+s116936
 
 N/Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/AddWordModel.o
 t1322561792
@@ -2127,9 +2127,9 @@ i"RecordingViewProtocol.h"
 i"AddWordModel.h"
 
 N/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/AddWord.m
-c000000004ED8B25D0000000000003FFC
-t1322824285
-s16380
+c000000004ED8C51D0000000000003F35
+t1322829085
+s16181
 i"AddWord.h"
 i"MyPickerViewContrller.h"
 i"WordTypes.h"
@@ -4040,14 +4040,14 @@ t1296831738
 s221
 
 N/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/Play 24x24.png
-c000000004A5CD86C0000000000000107
-t1247598700
-s263
+c000000004ED8B62A00000000000017F3
+t1322825258
+s6131
 
 N/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/Radio 24x24.png
-c000000004A5CD86C000000000000026D
-t1247598700
-s621
+c000000004ED8B72F0000000000001860
+t1322825519
+s6240
 
 N/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/Reachability.h
 c000000004DC8E37C0000000000000F1B
@@ -4075,14 +4075,14 @@ t1296831738
 s248
 
 N/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/Record 24x24.png
-c000000004A5CD86C000000000000013A
-t1247598700
-s314
+c000000004ED8B611000000000000181E
+t1322825233
+s6174
 
 N/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/RecordFullView.xib
-c000000004ED8A26E0000000000005491
-t1322820206
-s21649
+c000000004ED8C4B70000000000006D58
+t1322828983
+s27992
 
 N/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/RecordingViewController.h
 c000000004DEF6D46000000000000057D
@@ -4724,9 +4724,9 @@ t1317625022
 s9676
 
 N/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/Wrong 24x24.png
-c000000004A5CD86C0000000000000133
-t1247598700
-s307
+c000000004ED8B79B000000000000181F
+t1322825627
+s6175
 
 N/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/Y axis rotation copy 24x24.png
 c000000004D4C14FA00000000000001DA
@@ -5128,7 +5128,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciese333b1dde988b441^5891b1dde988b441^-968"[WARN]Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Pause 16x16.png[WARN]Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Play 16x16.png[WARN]Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Record 16x16.png[WARN]Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Voice 24x24.png[WARN]Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/CountryNameCode.txt[WARN]Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/CountryNameCode.txt6(21%IDEActivityLogMessage2@153"Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Pause 16x16.png-344517085#18446744073709551615#0#-1#-----2@152"Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Play 16x16.png-344517085#18446744073709551615#0#-1#-----2@154"Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Record 16x16.png-344517085#18446744073709551615#0#-1#-----2@153"Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Voice 24x24.png-344517085#18446744073709551615#0#-1#-----2@157"Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/CountryNameCode.txt-344517085#18446744073709551615#0#-1#-----2@157"Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/CountryNameCode.txt-344517085#18446744073709551615#0#-1#-----0#1#0#--18"Check dependencies36"91657B00-C614-496C-89FC-8891BC84B96E-
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesdb156a9dfc88b441^17b96f9efc88b441^-968"[WARN]Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Pause 16x16.png[WARN]Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Play 16x16.png[WARN]Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Record 16x16.png[WARN]Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Voice 24x24.png[WARN]Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/CountryNameCode.txt[WARN]Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/CountryNameCode.txt6(21%IDEActivityLogMessage2@153"Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Pause 16x16.png-344521886#18446744073709551615#0#-1#-----2@152"Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Play 16x16.png-344521886#18446744073709551615#0#-1#-----2@154"Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Record 16x16.png-344521886#18446744073709551615#0#-1#-----2@153"Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Voice 24x24.png-344521886#18446744073709551615#0#-1#-----2@157"Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/CountryNameCode.txt-344521886#18446744073709551615#0#-1#-----2@157"Warning: Multiple build commands for output file /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/CountryNameCode.txt-344521886#18446744073709551615#0#-1#-----0#1#0#--18"Check dependencies36"F53D97B7-1495-4ABF-8826-74184DE8EC08-
 
 CCompileC build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/ARFontPickerViewController.o /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/ARFontPickerViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
 s344254594.167877
@@ -5144,8 +5144,8 @@ xcom.apple.compilers.llvmgcc42
 lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compile /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/ARFontPickerViewController.m0e112b82e884b441^bbec5f82e884b441^---0#0#0#-19%DVTDocumentLocation2@99"file://localhost/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/ARFontPickerViewController.m0000000000000000^2362"CompileC build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/ARFontPickerViewController.o iTeachWords/ARFontPickerViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/edwinzuydendorp/github/iTheachWords    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/iTeachWords-generated-files.hmap -I/Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/iTeachWords-own-target-headers.hmap -I/Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/iTeachWords-all-target-headers.hmap -iquote /Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/iTeachWords-project-headers.hmap -I/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/include -I/Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/DerivedSources/i386 -I/Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/DerivedSources -F/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/d1/d1Xvx0YoEkaKhMnH2WXT2++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iTeachWords-Prefix-cchsdebchvkzbkdhsxaiovvjhnrv/iTeachWords-Prefix.pch -c /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/ARFontPickerViewController.m -o /Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/ARFontPickerViewController.o36"9F54D7A9-B252-49E4-89CC-61FC00431FF5-
 
 CCompileC build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/AddWord.o /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/AddWord.m normal i386 objective-c com.apple.compilers.llvmgcc42
-s344517085.817231
-e344517086.146493
+s344521886.511941
+e344521888.327773
 r1
 xCompileC
 xbuild/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/AddWord.o
@@ -5154,7 +5154,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.llvmgcc42
-lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Compile /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/AddWord.m5249d1dde988b441^348225dee988b441^---0#0#0#-19%DVTDocumentLocation2@80"file://localhost/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/AddWord.m0000000000000000^2286"CompileC build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/AddWord.o iTeachWords/AddWord.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/edwinzuydendorp/github/iTheachWords    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/iTeachWords-generated-files.hmap -I/Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/iTeachWords-own-target-headers.hmap -I/Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/iTeachWords-all-target-headers.hmap -iquote /Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/iTeachWords-project-headers.hmap -I/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/include -I/Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/DerivedSources/i386 -I/Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/DerivedSources -F/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/d1/d1Xvx0YoEkaKhMnH2WXT2++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iTeachWords-Prefix-cchsdebchvkzbkdhsxaiovvjhnrv/iTeachWords-Prefix.pch -c /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/AddWord.m -o /Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/AddWord.o36"95197DAA-EFF8-4622-B0D2-C82194197B6C-
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Compile /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/AddWord.m7827839efc88b441^bdff53a0fc88b441^---0#0#0#-19%DVTDocumentLocation2@80"file://localhost/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/AddWord.m0000000000000000^2286"CompileC build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/AddWord.o iTeachWords/AddWord.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/edwinzuydendorp/github/iTheachWords    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/iTeachWords-generated-files.hmap -I/Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/iTeachWords-own-target-headers.hmap -I/Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/iTeachWords-all-target-headers.hmap -iquote /Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/iTeachWords-project-headers.hmap -I/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/include -I/Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/DerivedSources/i386 -I/Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/DerivedSources -F/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/d1/d1Xvx0YoEkaKhMnH2WXT2++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iTeachWords-Prefix-cchsdebchvkzbkdhsxaiovvjhnrv/iTeachWords-Prefix.pch -c /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/AddWord.m -o /Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/AddWord.o36"543304EA-2F8A-468A-AA86-109489124D4E-
 
 CCompileC build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/AddWordModel.o /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/AddWordModel.m normal i386 objective-c com.apple.compilers.llvmgcc42
 s344254592.196694
@@ -6681,12 +6681,12 @@ x/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/NewWordsTable.xib
 lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compiling /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/NewWordsTable.xibc3bacd9ac884b441^3cf9dc9ac884b441^---0#0#0#-19%DVTDocumentLocation2@88"file://localhost/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/NewWordsTable.xib0000000000000000^705"CompileXIB iTeachWords/NewWordsTable.xib    cd /Users/edwinzuydendorp/github/iTheachWords    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.1    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Developer/usr/bin/..    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/NewWordsTable.nib /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/NewWordsTable.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk36"E1580D7B-88FA-4CAE-BA25-FD27BE5A75A5-
 
 CCompileXIB /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/RecordFullView.xib
-s344513006.776285
-e344513008.003155
+s344521783.992284
+e344521784.939157
 r1
 xCompileXIB
 x/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/RecordFullView.xib
-lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Compiling /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/RecordFullView.xiba7cfc6eed988b441^35d000f0d988b441^---0#0#0#-19%DVTDocumentLocation2@89"file://localhost/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/RecordFullView.xib0000000000000000^708"CompileXIB iTeachWords/RecordFullView.xib    cd /Users/edwinzuydendorp/github/iTheachWords    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.1    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Developer/usr/bin/..    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/RecordFullView.nib /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/RecordFullView.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk36"67C79E86-934E-477C-93B7-2F16F1B2AE21-
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Compiling /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/RecordFullView.xib651dfe37fc88b441^0d6df038fc88b441^---0#0#0#-19%DVTDocumentLocation2@89"file://localhost/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/RecordFullView.xib0000000000000000^708"CompileXIB iTeachWords/RecordFullView.xib    cd /Users/edwinzuydendorp/github/iTheachWords    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.1    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Developer/usr/bin/..    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/RecordFullView.nib /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/RecordFullView.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk36"E288A221-D249-4A8F-804C-67A9DA71112E-
 
 CCompileXIB /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/RecordingViewController.xib
 s344246425.738851
@@ -7283,22 +7283,22 @@ xbuild/Release-iphonesimulator/iTeachWords.app/Play 16x16.png
 lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Copy build/Release-iphonesimulator/iTeachWords.app/Play 16x16.pnga67c149ac884b441^6f7e1b9ac884b441^---0#0#0#-19%DVTDocumentLocation2@121"file://localhost/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Play%2016x16.png0000000000000000^578"CpResource "iTeachWords/Play 16x16.png" "build/Release-iphonesimulator/iTeachWords.app/Play 16x16.png"    cd /Users/edwinzuydendorp/github/iTheachWords    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks "/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/Play 16x16.png" /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app36"3EE1E806-2F54-47B5-8F6D-B623F3C23678-
 
 CCpResource "iTeachWords/Play 24x24.png" "build/Release-iphonesimulator/iTeachWords.app/Play 24x24.png"
-s344246428.122882
-e344246428.125211
+s344518444.173902
+e344518444.188594
 r1
 xCpResource
 xiTeachWords/Play 24x24.png
 xbuild/Release-iphonesimulator/iTeachWords.app/Play 24x24.png
-lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Copy build/Release-iphonesimulator/iTeachWords.app/Play 24x24.pngdc841f9cc884b441^d718209cc884b441^---0#0#0#-19%DVTDocumentLocation2@121"file://localhost/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Play%2024x24.png00f82008dcffdf42^578"CpResource "iTeachWords/Play 24x24.png" "build/Release-iphonesimulator/iTeachWords.app/Play 24x24.png"    cd /Users/edwinzuydendorp/github/iTheachWords    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks "/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/Play 24x24.png" /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app36"C42CDE1C-B82D-4BBC-9CC2-38A4E024F7BB-
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Copy build/Release-iphonesimulator/iTeachWords.app/Play 24x24.pnga1a02c2cef88b441^8751302cef88b441^---0#0#0#-19%DVTDocumentLocation2@121"file://localhost/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Play%2024x24.png0000000000000000^578"CpResource "iTeachWords/Play 24x24.png" "build/Release-iphonesimulator/iTeachWords.app/Play 24x24.png"    cd /Users/edwinzuydendorp/github/iTheachWords    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks "/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/Play 24x24.png" /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app36"E6783373-1119-44FE-B61C-885011872850-
 
 CCpResource "iTeachWords/Radio 24x24.png" "build/Release-iphonesimulator/iTeachWords.app/Radio 24x24.png"
-s344246428.074573
-e344246428.102403
+s344518443.753093
+e344518444.074611
 r1
 xCpResource
 xiTeachWords/Radio 24x24.png
 xbuild/Release-iphonesimulator/iTeachWords.app/Radio 24x24.png
-lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection66"Copy build/Release-iphonesimulator/iTeachWords.app/Radio 24x24.png3527139cc884b441^9b371a9cc884b441^---0#0#0#-19%DVTDocumentLocation2@122"file://localhost/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Radio%2024x24.png00f82008dcffdf42^581"CpResource "iTeachWords/Radio 24x24.png" "build/Release-iphonesimulator/iTeachWords.app/Radio 24x24.png"    cd /Users/edwinzuydendorp/github/iTheachWords    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks "/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/Radio 24x24.png" /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app36"AC46BA9D-D11E-4FF6-8E7D-72C431794149-
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection66"Copy build/Release-iphonesimulator/iTeachWords.app/Radio 24x24.png44e0c02bef88b441^5723132cef88b441^---0#0#0#-19%DVTDocumentLocation2@122"file://localhost/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Radio%2024x24.png0000000000000000^581"CpResource "iTeachWords/Radio 24x24.png" "build/Release-iphonesimulator/iTeachWords.app/Radio 24x24.png"    cd /Users/edwinzuydendorp/github/iTheachWords    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks "/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/Radio 24x24.png" /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app36"F817B622-159A-47F3-8C0F-E820FA00DD8F-
 
 CCpResource "iTeachWords/Record 16x16.png" "build/Release-iphonesimulator/iTeachWords.app/Record 16x16.png"
 s344246426.163092
@@ -7310,13 +7310,13 @@ xbuild/Release-iphonesimulator/iTeachWords.app/Record 16x16.png
 lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"Copy build/Release-iphonesimulator/iTeachWords.app/Record 16x16.png23db299ac884b441^26562e9ac884b441^---0#0#0#-19%DVTDocumentLocation2@123"file://localhost/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Record%2016x16.png0000000000000000^584"CpResource "iTeachWords/Record 16x16.png" "build/Release-iphonesimulator/iTeachWords.app/Record 16x16.png"    cd /Users/edwinzuydendorp/github/iTheachWords    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks "/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/Record 16x16.png" /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app36"8FE59740-6F96-4F37-91B9-D305E55391A9-
 
 CCpResource "iTeachWords/Record 24x24.png" "build/Release-iphonesimulator/iTeachWords.app/Record 24x24.png"
-s344246428.114793
-e344246428.121802
+s344518444.158839
+e344518444.171337
 r1
 xCpResource
 xiTeachWords/Record 24x24.png
 xbuild/Release-iphonesimulator/iTeachWords.app/Record 24x24.png
-lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"Copy build/Release-iphonesimulator/iTeachWords.app/Record 24x24.png04721d9cc884b441^e42d1f9cc884b441^---0#0#0#-19%DVTDocumentLocation2@123"file://localhost/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Record%2024x24.png00f82008dcffdf42^584"CpResource "iTeachWords/Record 24x24.png" "build/Release-iphonesimulator/iTeachWords.app/Record 24x24.png"    cd /Users/edwinzuydendorp/github/iTheachWords    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks "/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/Record 24x24.png" /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app36"F33E5654-2E83-4AF3-8CF2-1B96FD88FA89-
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"Copy build/Release-iphonesimulator/iTeachWords.app/Record 24x24.png4dbb282cef88b441^e6e62b2cef88b441^---0#0#0#-19%DVTDocumentLocation2@123"file://localhost/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Record%2024x24.png0000000000000000^584"CpResource "iTeachWords/Record 24x24.png" "build/Release-iphonesimulator/iTeachWords.app/Record 24x24.png"    cd /Users/edwinzuydendorp/github/iTheachWords    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks "/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/Record 24x24.png" /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app36"4C3737D2-85E9-401B-8230-5867BC778C76-
 
 CCpResource "iTeachWords/Slideshow 16x16.png" "build/Release-iphonesimulator/iTeachWords.app/Slideshow 16x16.png"
 s344246426.550277
@@ -7382,13 +7382,13 @@ xbuild/Release-iphonesimulator/iTeachWords.app/Voice 24x24.png
 lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection66"Copy build/Release-iphonesimulator/iTeachWords.app/Voice 24x24.png0d55399ac884b441^c4ec399ac884b441^---0#0#0#-19%DVTDocumentLocation2@122"file://localhost/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Voice%2024x24.png0000000000000000^581"CpResource "iTeachWords/Voice 24x24.png" "build/Release-iphonesimulator/iTeachWords.app/Voice 24x24.png"    cd /Users/edwinzuydendorp/github/iTheachWords    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks "/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/Voice 24x24.png" /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app36"05A21D5C-0BCE-49C5-BBEC-E71CF83E132B-
 
 CCpResource "iTeachWords/Wrong 24x24.png" "build/Release-iphonesimulator/iTeachWords.app/Wrong 24x24.png"
-s344246428.103762
-e344246428.113589
+s344518444.076553
+e344518444.157585
 r1
 xCpResource
 xiTeachWords/Wrong 24x24.png
 xbuild/Release-iphonesimulator/iTeachWords.app/Wrong 24x24.png
-lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection66"Copy build/Release-iphonesimulator/iTeachWords.app/Wrong 24x24.png99a01a9cc884b441^5e141d9cc884b441^---0#0#0#-19%DVTDocumentLocation2@122"file://localhost/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Wrong%2024x24.png00f82008dcffdf42^581"CpResource "iTeachWords/Wrong 24x24.png" "build/Release-iphonesimulator/iTeachWords.app/Wrong 24x24.png"    cd /Users/edwinzuydendorp/github/iTheachWords    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks "/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/Wrong 24x24.png" /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app36"E421435F-0319-4372-96CD-19BE60297D0C-
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection66"Copy build/Release-iphonesimulator/iTeachWords.app/Wrong 24x24.png69aa132cef88b441^8461282cef88b441^---0#0#0#-19%DVTDocumentLocation2@122"file://localhost/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Wrong%2024x24.png0000000000000000^581"CpResource "iTeachWords/Wrong 24x24.png" "build/Release-iphonesimulator/iTeachWords.app/Wrong 24x24.png"    cd /Users/edwinzuydendorp/github/iTheachWords    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -resolve-src-symlinks "/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/Wrong 24x24.png" /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app36"A6FA0C24-300D-4AE1-B096-262EF4EF40A3-
 
 CCpResource "iTeachWords/Y axis rotation copy 24x24.png" "build/Release-iphonesimulator/iTeachWords.app/Y axis rotation copy 24x24.png"
 s344246426.388340
@@ -9430,23 +9430,23 @@ o/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/iTeachWordsDataModel.xcd
 lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection141"DataModelVersionCompile build/Release-iphonesimulator/iTeachWords.app/iTeachWordsDataModel.momd iTeachWords/iTeachWordsDataModel.xcdatamodeldf0a63778c884b441^53cfae78c884b441^-1596"/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/iTeachWordsDataModel.xcdatamodeld/iTeachWordsDataModel.xcdatamodel:StatisticType.statistics: warning: Setting the No Action Delete Rule on StatisticType.statistics is an advanced setting [5]/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/iTeachWordsDataModel.xcdatamodeld/iTeachWordsDataModel.xcdatamodel:Statistic.type: warning: Setting the No Action Delete Rule on Statistic.type is an advanced setting [5]/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/iTeachWordsDataModel.xcdatamodeld/iTeachWordsDataModel.xcdatamodel:Statistic.word: warning: Setting the No Action Delete Rule on Statistic.word is an advanced setting [5]/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/iTeachWordsDataModel.xcdatamodeld/iTeachWordsDataModel.xcdatamodel:Words.sounds: warning: Setting the No Action Delete Rule on Words.sounds is an advanced setting [5]/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/iTeachWordsDataModel.xcdatamodeld/iTeachWordsDataModel.xcdatamodel:Words.statistics: warning: Setting the No Action Delete Rule on Words.statistics is an advanced setting [5]/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/iTeachWordsDataModel.xcdatamodeld/iTeachWordsDataModel.xcdatamodel:Words.type: warning: Setting the No Action Delete Rule on Words.type is an advanced setting [5]/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/iTeachWordsDataModel.xcdatamodeld/iTeachWordsDataModel.xcdatamodel:WordTypes.words: warning: Setting the No Action Delete Rule on WordTypes.words is an advanced setting [5]7(21%IDEActivityLogMessage2@84"Setting the No Action Delete Rule on StatisticType.statistics is an advanced setting-344246392#18446744073709551615#0#-1#-23%DVTTextDocumentLocation3@138"file://localhost/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/iTeachWordsDataModel.xcdatamodeld/iTeachWordsDataModel.xcdatamodel/0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#17"Consistency Error--2@74"Setting the No Action Delete Rule on Statistic.type is an advanced setting-344246392#18446744073709551615#0#-1#-3@138"file://localhost/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/iTeachWordsDataModel.xcdatamodeld/iTeachWordsDataModel.xcdatamodel/0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#17"Consistency Error--2@74"Setting the No Action Delete Rule on Statistic.word is an advanced setting-344246392#18446744073709551615#0#-1#-3@138"file://localhost/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/iTeachWordsDataModel.xcdatamodeld/iTeachWordsDataModel.xcdatamodel/0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#17"Consistency Error--2@72"Setting the No Action Delete Rule on Words.sounds is an advanced setting-344246392#18446744073709551615#0#-1#-3@138"file://localhost/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/iTeachWordsDataModel.xcdatamodeld/iTeachWordsDataModel.xcdatamodel/0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#17"Consistency Error--2@76"Setting the No Action Delete Rule on Words.statistics is an advanced setting-344246392#18446744073709551615#0#-1#-3@138"file://localhost/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/iTeachWordsDataModel.xcdatamodeld/iTeachWordsDataModel.xcdatamodel/0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#17"Consistency Error--2@70"Setting the No Action Delete Rule on Words.type is an advanced setting-344246392#18446744073709551615#0#-1#-3@138"file://localhost/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/iTeachWordsDataModel.xcdatamodeld/iTeachWordsDataModel.xcdatamodel/0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#17"Consistency Error--2@75"Setting the No Action Delete Rule on WordTypes.words is an advanced setting-344246392#18446744073709551615#0#-1#-3@138"file://localhost/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/iTeachWordsDataModel.xcdatamodeld/iTeachWordsDataModel.xcdatamodel/0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#17"Consistency Error--0#0#0#-19%DVTDocumentLocation4@105"file://localhost/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/iTeachWordsDataModel.xcdatamodeld/0000000000000000^774"DataModelVersionCompile build/Release-iphonesimulator/iTeachWords.app/iTeachWordsDataModel.momd iTeachWords/iTeachWordsDataModel.xcdatamodeld    cd /Users/edwinzuydendorp/github/iTheachWords    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/momc -XD_MOMC_SDKROOT=/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -XD_MOMC_IOS_TARGET_VERSION=4.1 -MOMC_PLATFORMS iphonesimulator -MOMC_PLATFORMS iphoneos -XD_MOMC_TARGET_VERSION=10.6 /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/iTeachWordsDataModel.xcdatamodeld /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/iTeachWordsDataModel.momd36"9094ABF3-C8CB-4895-B266-6614362C3EC7-
 
 CGenerateDSYMFile /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app.dSYM /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/iTeachWords
-s344517086.259743
-e344517086.405250
+s344521889.081087
+e344521889.255958
 r1
 xGenerateDSYMFile
 x/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app.dSYM
 x/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/iTeachWords
-lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection104"Generating /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app.dSYMd68e42dee988b441^96ed67dee988b441^---0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app.dSYM/0000000000000000^537"GenerateDSYMFile build/Release-iphonesimulator/iTeachWords.app.dSYM build/Release-iphonesimulator/iTeachWords.app/iTeachWords    cd /Users/edwinzuydendorp/github/iTheachWords    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/iTeachWords -o /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app.dSYM36"B01D1E82-6DD8-46EE-81BD-BD086349AC28-
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection104"Generating /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app.dSYM6fd614a1fc88b441^948741a1fc88b441^---0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app.dSYM/0000000000000000^537"GenerateDSYMFile build/Release-iphonesimulator/iTeachWords.app.dSYM build/Release-iphonesimulator/iTeachWords.app/iTeachWords    cd /Users/edwinzuydendorp/github/iTheachWords    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/iTeachWords -o /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app.dSYM36"E813BC7D-564B-4B42-A14E-F13BBAE4CAB6-
 
 CLd /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/iTeachWords normal i386
-s344517086.149189
-e344517086.257844
+s344521888.329768
+e344521889.079087
 r1
 xLd
 x/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/iTeachWords
 xnormal
 xi386
-lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection105"Link /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/iTeachWords354326dee988b441^b40342dee988b441^---0#0#0#--1317"Ld build/Release-iphonesimulator/iTeachWords.app/iTeachWords normal i386    cd /Users/edwinzuydendorp/github/iTheachWords    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -L/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator -L/Users/edwinzuydendorp/github/iTheachWords/iTeachWords -F/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator -filelist /Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/iTeachWords.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -framework iAd -framework CoreGraphics -framework UIKit -framework AVFoundation -framework MessageUI -framework CoreAudio -framework CoreFoundation -framework QuartzCore -framework CoreData -framework SystemConfiguration -framework Foundation -lTestFlight -o /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/iTeachWords36"FB1410B3-75CD-4016-87CF-00ED1EE912CF-
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection105"Link /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/iTeachWords7b8654a0fc88b441^7d4014a1fc88b441^---0#0#0#--1317"Ld build/Release-iphonesimulator/iTeachWords.app/iTeachWords normal i386    cd /Users/edwinzuydendorp/github/iTheachWords    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -L/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator -L/Users/edwinzuydendorp/github/iTheachWords/iTeachWords -F/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator -filelist /Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/Objects-normal/i386/iTeachWords.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -framework iAd -framework CoreGraphics -framework UIKit -framework AVFoundation -framework MessageUI -framework CoreAudio -framework CoreFoundation -framework QuartzCore -framework CoreData -framework SystemConfiguration -framework Foundation -lTestFlight -o /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/iTeachWords36"6BFDAB20-8889-4A73-A0DA-8D82A4707932-
 
 CProcessInfoPlistFile /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app/Info.plist iTeachWords/iTeachWords-Info.plist
 s344254585.083690
@@ -9490,10 +9490,10 @@ xcom.apple.compilers.llvmgcc42
 lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection45"Precompile iTeachWords/iTeachWords-Prefix.pch0af63778c884b441^1fd9847ac884b441^---0#0#0#-19%DVTDocumentLocation2@93"file://localhost/Users/edwinzuydendorp/github/iTheachWords/iTeachWords/iTeachWords-Prefix.pch0000000000000000^2254"ProcessPCH /var/folders/d1/d1Xvx0YoEkaKhMnH2WXT2++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iTeachWords-Prefix-fhjncttulhnrbodaazluyanwubkn/iTeachWords-Prefix.pch.gch iTeachWords/iTeachWords-Prefix.pch normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Users/edwinzuydendorp/github/iTheachWords    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/iTeachWords-generated-files.hmap -I/Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/iTeachWords-own-target-headers.hmap -I/Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/iTeachWords-all-target-headers.hmap -iquote /Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/iTeachWords-project-headers.hmap -I/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/include -I/Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/DerivedSources/i386 -I/Users/edwinzuydendorp/github/iTheachWords/build/iTeachWords.build/Release-iphonesimulator/iTeachWords.build/DerivedSources -F/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator -DNS_BLOCK_ASSERTIONS=1 -c /Users/edwinzuydendorp/github/iTheachWords/iTeachWords/iTeachWords-Prefix.pch -o /var/folders/d1/d1Xvx0YoEkaKhMnH2WXT2++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iTeachWords-Prefix-fhjncttulhnrbodaazluyanwubkn/iTeachWords-Prefix.pch.gch36"B92BAF6D-F050-405A-A57A-0B27EF698B48-
 
 CTouch /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app
-s344517086.612322
-e344517086.627289
+s344521889.466390
+e344521889.472579
 r1
 xTouch
 x/Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app
-lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Touch /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.appbccc9cdee988b441^8597a0dee988b441^---0#0#0#--344"Touch build/Release-iphonesimulator/iTeachWords.app    cd /Users/edwinzuydendorp/github/iTheachWords    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app36"159DB361-AF6D-4188-B228-21317BBC3C23-
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Touch /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app897877a1fc88b441^b30879a1fc88b441^---0#0#0#--344"Touch build/Release-iphonesimulator/iTeachWords.app    cd /Users/edwinzuydendorp/github/iTheachWords    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/edwinzuydendorp/github/iTheachWords/build/Release-iphonesimulator/iTeachWords.app36"014D7A8D-7855-4F59-9370-8F1951410F3F-
 
