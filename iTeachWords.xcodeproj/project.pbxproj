@@ -99,6 +99,8 @@
 		283B1F0E1383EDA9004EB5D4 /* RecordFullView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 283B1F0D1383EDA9004EB5D4 /* RecordFullView.xib */; };
 		283B1F2C1384EE01004EB5D4 /* WorldTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 283B1F2A1384EE01004EB5D4 /* WorldTableViewController.m */; };
 		283B1F2D1384EE01004EB5D4 /* WorldTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 283B1F2B1384EE01004EB5D4 /* WorldTableViewController.xib */; };
+		283FF868148D05C5006CCD22 /* AddNewWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 283FF866148D05C4006CCD22 /* AddNewWordViewController.m */; };
+		283FF869148D05C5006CCD22 /* AddNewWordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 283FF867148D05C5006CCD22 /* AddNewWordViewController.xib */; };
 		284092CE1381242700864711 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284092CD1381242700864711 /* Foundation.framework */; };
 		284092D61381242700864711 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 284092D41381242700864711 /* InfoPlist.strings */; };
 		284092D91381242700864711 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 284092D81381242700864711 /* main.m */; };
@@ -542,6 +544,9 @@
 		283B1F291384EE01004EB5D4 /* WorldTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldTableViewController.h; sourceTree = "<group>"; };
 		283B1F2A1384EE01004EB5D4 /* WorldTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldTableViewController.m; sourceTree = "<group>"; };
 		283B1F2B1384EE01004EB5D4 /* WorldTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorldTableViewController.xib; sourceTree = "<group>"; };
+		283FF865148D05C4006CCD22 /* AddNewWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewWordViewController.h; sourceTree = "<group>"; };
+		283FF866148D05C4006CCD22 /* AddNewWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewWordViewController.m; sourceTree = "<group>"; };
+		283FF867148D05C5006CCD22 /* AddNewWordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddNewWordViewController.xib; sourceTree = "<group>"; };
 		284092C71381242700864711 /* iTeachWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTeachWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		284092CD1381242700864711 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		284092D31381242700864711 /* iTeachWords-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iTeachWords-Info.plist"; sourceTree = "<group>"; };
@@ -1121,6 +1126,9 @@
 			isa = PBXGroup;
 			children = (
 				2863B2FB139F744600B40EE5 /* Model */,
+				283FF865148D05C4006CCD22 /* AddNewWordViewController.h */,
+				283FF866148D05C4006CCD22 /* AddNewWordViewController.m */,
+				283FF867148D05C5006CCD22 /* AddNewWordViewController.xib */,
 				28296B361381494E000129E8 /* AddWord.h */,
 				28296B371381494E000129E8 /* AddWord.m */,
 				28296B381381494E000129E8 /* AddWord.xib */,
@@ -2251,6 +2259,7 @@
 				28E0E1D614601790005BFB0E /* TextFieldLanguagesCell.xib in Resources */,
 				28C61EF8146BCB360065E75A /* InfoViewController.xib in Resources */,
 				28C61EFA146BCCEC0065E75A /* Mail 24x24.png in Resources */,
+				283FF869148D05C5006CCD22 /* AddNewWordViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2343,6 +2352,7 @@
 				28BDB691148387C500BC2688 /* BannerTableViewController.m in Sources */,
 				28A194A114862FDD005B343A /* SpeachView.m in Sources */,
 				2830DEF3148CC7D900BA1964 /* XMLReader.m in Sources */,
+				283FF868148D05C5006CCD22 /* AddNewWordViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

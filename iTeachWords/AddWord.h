@@ -9,53 +9,27 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import <CoreAudio/CoreAudioTypes.h>
-#import "RecordingViewProtocol.h"
-#import "AddWordModel.h"
 
-@class MyPickerViewContrller,MyUIViewClass,RecordingViewController,AddWordModel,WBEngine;
+@class MyUIViewClass,AddNewWordViewController;
 
-@interface AddWord : UIViewController <UIWebViewDelegate, UITextFieldDelegate, RecordingViewProtocol, UIActionSheetDelegate>{
+@interface AddWord : UIViewController <UIWebViewDelegate, UITextFieldDelegate, UIActionSheetDelegate>{
 	IBOutlet UINavigationBar *myNavigationBar;
 	IBOutlet UIWebView		*myWebView;
-	IBOutlet UIPickerView	*myPickerView;
-	IBOutlet UILabel		*myPickerLabel;
-	IBOutlet UITextField	*myTextFieldEng,*myTextFieldRus;
     IBOutlet MyUIViewClass  *myToolbarView;
-    IBOutlet UIButton       *recordButtonView;
     IBOutlet UIView         *loadWebButtonView;
-	MyPickerViewContrller	*myPicker;
-    RecordingViewController *recordView;
     
-    AddWordModel            *dataModel;
-    bool                    flgSave;
-    bool                    editingWord;
-    
-    WBEngine                *wbEngine;
+    AddNewWordViewController    *wordsView;
 }
 
 @property (nonatomic, assign) IBOutlet UILabel *myPickerLabel;
 @property (nonatomic, retain) IBOutlet UITextField *myTextFieldEng,*myTextFieldRus;
 
-
-- (void)inputModeDidChange:(NSNotification*)notificationl;
-- (void)     loadData;
-- (IBAction) showMyPickerView;
 - (void)     back;
-
-- (IBAction) save;
-- (IBAction) recordPressed:(id)sender;
 - (IBAction) loadWebView;
-
-- (void)	 setImageFlag;
-- (void)     closeAllKeyboard;
-- (void) loadTranslateTextFromServer;
-
-- (void)setWord:(Words *)_word;
+- (void)setThemeName;
+- (IBAction) showMyPickerView;
+- (void)save;
+- (void)showWebLoadingView;
 - (void)setText:(NSString*)text;
 - (void)setTranslate:(NSString*)text;
-- (void)addRecButtonOnTextField:(UITextField*)textField;
-- (void)createMenu;
-- (void)textFieldDidChange:(UITextField*)textField;
-- (void)setThemeName;
-
 @end
