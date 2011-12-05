@@ -45,10 +45,12 @@
 	url = [[NSString alloc] initWithFormat: @"https://ajax.googleapis.com/ajax/services/language/translate?v=1.0&q=%@&langpair=%@|%@",currentWord.text,
           [[NSUserDefaults standardUserDefaults] objectForKey:TRANSLATE_COUNTRY_CODE],
           [[NSUserDefaults standardUserDefaults] objectForKey:NATIVE_COUNTRY_CODE]];
-    urlShow = [[NSString alloc] initWithFormat: @"http://translate.google.com/?hl=%@&sl=%@&tl=%@&ie=UTF-8&prev=_m&q=%@",
+    
+    self.urlShow = [[NSString alloc] initWithFormat: @"http://translate.google.com/?hl=%@&sl=%@&tl=%@&ie=UTF-8&prev=_m&q=%@",
                [[NSUserDefaults standardUserDefaults] objectForKey:NATIVE_COUNTRY_CODE],
            [[NSUserDefaults standardUserDefaults] objectForKey:TRANSLATE_COUNTRY_CODE],
            [[NSUserDefaults standardUserDefaults] objectForKey:NATIVE_COUNTRY_CODE],currentWord.text];
+    NSLog(@"%@",urlShow);
 }
 
 @end

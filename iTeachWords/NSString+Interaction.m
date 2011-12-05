@@ -8,6 +8,7 @@
 
 #import "NSString+Interaction.h"
 #import "JSON.h"
+#import "XMLReader.h"
 
 @implementation NSString (Interaction)
 
@@ -61,18 +62,26 @@
 - (NSString *) translateString{
     if ([iTeachWordsAppDelegate isNetwork]) {
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
-        NSString *url = [[NSString stringWithFormat:@"http://translate.google.ru/translate_a/t?client=x&text=%@&sl=%@&tl=%@",self,
+        NSString *url = [[NSString stringWithFormat:@"http://api.microsofttranslator.com/v2/http.svc/translate?appId=%@&text=%@&from=%@&to=%@",[[[NSBundle mainBundle] infoDictionary] objectForKey:@"TranslateAppId"],
+                          self,
                           [[NSUserDefaults standardUserDefaults] objectForKey:TRANSLATE_COUNTRY_CODE],
                           [[NSUserDefaults standardUserDefaults] objectForKey:NATIVE_COUNTRY_CODE]] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-        NSString *response = [[NSString alloc] initWithData:data encoding:NSUTF32BigEndianStringEncoding];
-        NSLog(@"%@",response);
-        NSDictionary *result = [[NSDictionary alloc] initWithDictionary:[response JSONValue]];
-        if (!result || ![result objectForKey:@"sentences"] || [[result objectForKey:@"sentences"] count] == 0 ) {
-            return NSLocalizedString(@"", @"");
+        NSString *response = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        //NSLog(@"responseText->%@",response);
+        @try
+        {
+            NSDictionary *result = [XMLReader dictionaryForXMLString:response error:nil];
+            if (!result || ![result objectForKey:@"string"] || [[result objectForKey:@"string"] objectForKey:@"text"]) {
+                return [[result objectForKey:@"string"] objectForKey:@"text"];
+            }
         }
-        return [[[result objectForKey:@"sentences"] objectAtIndex:0] objectForKey:@"trans"];
+        @finally
+        {
+            [response release];
+        }
+        return NSLocalizedString(@"", @"");
     }
     return nil;
 }

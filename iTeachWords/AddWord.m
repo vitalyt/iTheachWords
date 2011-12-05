@@ -86,6 +86,7 @@
     [dataModel createWord];
     myTextFieldRus.text = text;
     [dataModel.currentWord setTranslate:text];
+    [self textFieldDidChange:myTextFieldRus];
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -99,10 +100,7 @@
     myTextFieldRus.placeholder = [[NSUserDefaults standardUserDefaults] objectForKey:NATIVE_COUNTRY];
     [myTextFieldEng addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     [myTextFieldRus addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(inputModeDidChange:)
-                                                 name:@"UIKeyboardCurrentInputModeDidChangeNotification"
-                                               object:nil];
+    
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"grnd.png"]];
     self.navigationItem.titleView = (UIView *)myToolbarView;
 	[self setImageFlag];
@@ -294,7 +292,8 @@
         [self closeAllKeyboard];
         [dataModel createUrls];
         [self loadTranslateTextFromServer];
-        NSURLRequest *requestObj = [NSURLRequest requestWithURL:[NSURL URLWithString:dataModel.urlShow]];
+        NSURLRequest *requestObj = [NSURLRequest requestWithURL:[NSURL URLWithString:[dataModel.urlShow  stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
+        //NSLog(@"%@",dataModel.urlShow);
         myWebView.delegate = self;
         [myWebView loadRequest:requestObj];
     }
@@ -368,6 +367,10 @@
     if ([text length] == 0) {
         return;
     }
+    if (textField.tag == 100) {
+        NSString *translateText = [text translateString];
+        [self setTranslate:translateText];
+    }
     if (textField == myTextFieldEng) {
         [dataModel.currentWord setText:text];
     }else if (textField == myTextFieldRus) {
@@ -393,12 +396,8 @@
 }
 
 - (void)parceTranslateWord{
-    
     NSString *selectedText = [myWebView stringByEvaluatingJavaScriptFromString:@"window.getSelection().toString()"];
-    [myTextFieldRus setText:selectedText];
-    [self textFieldDidChange:myTextFieldRus];
-    [dataModel.currentWord setTranslate:selectedText];
-    NSLog(@"%@",selectedText);
+    [self setTranslate:selectedText];
 }
 
 - (void)dealloc {

@@ -191,11 +191,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "iTeachWords/AddWord.m"
-         timestampString = "344516771.811203"
+         timestampString = "344785576.180454"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "237"
-         endingLineNumber = "237"
+         startingLineNumber = "235"
+         endingLineNumber = "235"
          landmarkName = "-save"
          landmarkType = "5">
       </FileBreakpoint>
@@ -288,20 +288,6 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          isPathRelative = "1"
-         filePath = "iTeachWords/AddWordModel.m"
-         timestampString = "343916074.753622"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "49"
-         endingLineNumber = "49"
-         landmarkName = "-createUrls"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
          filePath = "iTeachWords/DictionaryViewController.m"
          timestampString = "342543536.693994"
          startingColumnNumber = "9223372036854775807"
@@ -365,20 +351,6 @@
          startingLineNumber = "162"
          endingLineNumber = "162"
          landmarkName = "-launchMailAppOnDevice"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "iTeachWords/NSString+Interaction.m"
-         timestampString = "342708304.6076"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "71"
-         endingLineNumber = "71"
-         landmarkName = "-translateString"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -457,41 +429,13 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "iTeachWords/AddWord.m"
-         timestampString = "344516771.811203"
+         timestampString = "344785576.180454"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "270"
-         endingLineNumber = "270"
+         startingLineNumber = "268"
+         endingLineNumber = "268"
          landmarkName = "-addRecButtonOnTextField:"
          landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "iTeachWords/AddWord.m"
-         timestampString = "344517029.844792"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "369"
-         endingLineNumber = "369"
-         landmarkName = "-textFieldDidEndEditing:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "iTeachWords/AddWord.m"
-         timestampString = "344517029.844792"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "354"
-         endingLineNumber = "354"
-         landmarkName = "@implementation AddWord"
-         landmarkType = "3">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

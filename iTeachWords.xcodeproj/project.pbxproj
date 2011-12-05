@@ -94,6 +94,7 @@
 		282EAF6A139E200D0057F316 /* Play 24x24.png in Resources */ = {isa = PBXBuildFile; fileRef = 282EAF69139E200A0057F316 /* Play 24x24.png */; };
 		282EAF85139E47E10057F316 /* Check 24x24.png in Resources */ = {isa = PBXBuildFile; fileRef = 282EAF84139E47E10057F316 /* Check 24x24.png */; };
 		282FEDD6147F813B0065A2F9 /* ARFontPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 282FEDD5147F813B0065A2F9 /* ARFontPickerViewController.m */; };
+		2830DEF3148CC7D900BA1964 /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2830DEF2148CC7D900BA1964 /* XMLReader.m */; };
 		283B1F0C1383E58E004EB5D4 /* Voice 24x24.png in Resources */ = {isa = PBXBuildFile; fileRef = 283B1F0B1383E58E004EB5D4 /* Voice 24x24.png */; };
 		283B1F0E1383EDA9004EB5D4 /* RecordFullView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 283B1F0D1383EDA9004EB5D4 /* RecordFullView.xib */; };
 		283B1F2C1384EE01004EB5D4 /* WorldTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 283B1F2A1384EE01004EB5D4 /* WorldTableViewController.m */; };
@@ -534,6 +535,8 @@
 		282EAF84139E47E10057F316 /* Check 24x24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Check 24x24.png"; sourceTree = "<group>"; };
 		282FEDD4147F813B0065A2F9 /* ARFontPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFontPickerViewController.h; sourceTree = "<group>"; };
 		282FEDD5147F813B0065A2F9 /* ARFontPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFontPickerViewController.m; sourceTree = "<group>"; };
+		2830DEF1148CC7D900BA1964 /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLReader.h; sourceTree = "<group>"; };
+		2830DEF2148CC7D900BA1964 /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLReader.m; sourceTree = "<group>"; };
 		283B1F0B1383E58E004EB5D4 /* Voice 24x24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Voice 24x24.png"; sourceTree = "<group>"; };
 		283B1F0D1383EDA9004EB5D4 /* RecordFullView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordFullView.xib; sourceTree = "<group>"; };
 		283B1F291384EE01004EB5D4 /* WorldTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldTableViewController.h; sourceTree = "<group>"; };
@@ -1257,6 +1260,15 @@
 			name = FontPiker;
 			sourceTree = "<group>";
 		};
+		2830DEEF148CC7C700BA1964 /* XMLReader */ = {
+			isa = PBXGroup;
+			children = (
+				2830DEF1148CC7D900BA1964 /* XMLReader.h */,
+				2830DEF2148CC7D900BA1964 /* XMLReader.m */,
+			);
+			name = XMLReader;
+			sourceTree = "<group>";
+		};
 		283B1F271384E698004EB5D4 /* WordTable */ = {
 			isa = PBXGroup;
 			children = (
@@ -1346,6 +1358,7 @@
 		284092EC1381244A00864711 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				2830DEEF148CC7C700BA1964 /* XMLReader */,
 				28122D001396762A00D5F906 /* StringTools */,
 				28D3C2E81386685600B35FC7 /* Cell */,
 				28296B2613813348000129E8 /* View */,
@@ -2329,6 +2342,7 @@
 				282FEDD6147F813B0065A2F9 /* ARFontPickerViewController.m in Sources */,
 				28BDB691148387C500BC2688 /* BannerTableViewController.m in Sources */,
 				28A194A114862FDD005B343A /* SpeachView.m in Sources */,
+				2830DEF3148CC7D900BA1964 /* XMLReader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
