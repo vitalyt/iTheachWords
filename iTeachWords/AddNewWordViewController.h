@@ -18,6 +18,9 @@
 	IBOutlet UIPickerView	*myPickerView;
     IBOutlet UITextField    *textFld;
     IBOutlet UITextField    *translateFid;
+    IBOutlet UILabel *themeLbl;
+    IBOutlet UIButton *saveButton;
+    IBOutlet UIButton *themeButton;
     IBOutlet MyUIViewClass  *myToolbarView;
 	MyPickerViewContrller	*myPicker;
     IBOutlet UIButton       *recordButtonView;
@@ -51,4 +54,6 @@
 - (void)createMenu;
 - (void)textFieldDidChange:(UITextField*)textField;
 - (void)setThemeName;
+- (void)removeChanges;
+
 @end

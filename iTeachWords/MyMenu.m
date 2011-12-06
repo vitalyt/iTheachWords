@@ -20,6 +20,7 @@
 #import "SettingsViewController.h"
 #import "InfoViewController.h"
 #import "SpeachView.h"
+#import "AddWordWebViewController.h"
 
 @implementation MyMenu
 
@@ -33,7 +34,7 @@
     if (self ) {
         // Custom initialization
         [self.navigationItem setTitle:NSLocalizedString(@"Menu", @"")];
-        data = [[NSArray alloc] initWithObjects:@"Word book",@"Lessons",@"Add new word",@"Text parser",@"Dictionary",@"Settings", nil];
+        data = [[NSArray alloc] initWithObjects:@"Word book",@"Lessons",@"Add new word",@"Text parser",@"Web",@"Dictionary",@"Settings", nil];
         contentImageArray = [[NSArray alloc] initWithObjects:@"folder_library",@"folder_private",@"Add new word",@"folder_documents-1", nil];
     }
     return self;
@@ -62,12 +63,13 @@
 
 - (void) viewDidLoad{
     [super viewDidLoad];
-//    SpeachView *viewSpeach = [[SpeachView alloc] initWithFrame:CGRectMake(50, 50, 200, 80)];
-//    [viewSpeach setBackgroundColor:[UIColor clearColor]];
-//    [self.view addSubview:viewSpeach];
-//    [viewSpeach release];
     table.allowsSelectionDuringEditing = YES;
     [self addInfoButton];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
 }
 
 - (void)addInfoButton{
@@ -169,12 +171,16 @@
         }
             break;          
         case 4:{
+            [self showWebView]; 
+        }
+            break;         
+        case 5:{
             DictionaryViewController *dictionaryView = [[DictionaryViewController alloc] initWithNibName:@"DictionaryViewController" bundle:nil];
             [self.navigationController pushViewController:dictionaryView animated:YES];
             [dictionaryView release]; 
         }
             break;       
-        case 5:{
+        case 6:{
 //            LanguagePickerController *languageView = [[LanguagePickerController alloc] initWithNibName:@"LanguagePickerController" bundle:nil];
 //            [self.navigationController pushViewController:languageView animated:YES];
 //            [languageView release];          
@@ -189,5 +195,14 @@
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+
+- (void)showWebView {
+    AddWordWebViewController *webViewController = [[AddWordWebViewController alloc] initWithFrame:self.view.frame];
+    webViewController.url = [NSString stringWithFormat:@"http://www.google.ru"
+                             ];
+	[self.navigationController pushViewController:webViewController animated:YES];
+	[webViewController release];
+}
+
 @end
 

@@ -14,5 +14,6 @@
 - (BOOL) validateAlphanumeric;
 - (void) removeSpaces;
 - (NSString *) translateString;
+- (NSDate *) dateWithFormat:(NSString *)format;
 
 @end

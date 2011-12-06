@@ -66,10 +66,11 @@
                           self,
                           [[NSUserDefaults standardUserDefaults] objectForKey:TRANSLATE_COUNTRY_CODE],
                           [[NSUserDefaults standardUserDefaults] objectForKey:NATIVE_COUNTRY_CODE]] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSLog(@"url->%@",url);
         NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
         NSString *response = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        //NSLog(@"responseText->%@",response);
+        NSLog(@"responseText->%@",response);
         @try
         {
             NSDictionary *result = [XMLReader dictionaryForXMLString:response error:nil];
@@ -84,6 +85,21 @@
         return NSLocalizedString(@"", @"");
     }
     return nil;
+}
+
+- (NSDate *) dateWithFormat:(NSString *)format{
+	NSDateFormatter *df = [[NSDateFormatter alloc] init];    
+    [df setDateFormat:format]; 
+   // NSTimeZone *timeZone = [NSTimeZone timeZoneForSecondsFromGMT:[iTeachWordsAppDelegate timezone]];
+   // [df setTimeZone:timeZone];
+	NSDate *date = [[[NSDate alloc] init] autorelease];
+	date = [df dateFromString:self];
+	if (date == nil) {
+		date = [NSDate date];
+	}
+	[df release];
+    NSLog(@"%@",date);
+    return date;
 }
 
 @end

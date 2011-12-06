@@ -65,6 +65,12 @@
     textFld = nil;
     [translateFid release];
     translateFid = nil;
+    [themeLbl release];
+    themeLbl = nil;
+    [saveButton release];
+    saveButton = nil;
+    [themeButton release];
+    themeButton = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -81,6 +87,8 @@
         NSArray *types = [fetches fetchedObjects];
         if (types && [types count]>0) {
             dataModel.wordType = [[types objectAtIndex:0] retain];
+            //[DELEGATE.navigationItem setPrompt:[NSString stringWithFormat:@"Current theme is %@",dataModel.wordType.name]];
+            [themeLbl setText:[NSString stringWithFormat:@"Current theme is %@",dataModel.wordType.name]];
             [dataModel createWord];
             if (dataModel.currentWord) {
                 [dataModel.currentWord setText:textFld.text];
@@ -97,7 +105,8 @@
         translateFid.text = dataModel.currentWord.translate;
         [self textFieldDidChange:textFld];
         [self textFieldDidChange:translateFid];
-        [DELEGATE.navigationItem setPrompt:[NSString stringWithFormat:@"Current theme is %@",dataModel.wordType.name]]; 
+        //[DELEGATE.navigationItem setPrompt:[NSString stringWithFormat:@"Current theme is %@",dataModel.wordType.name]]; 
+        [themeLbl setText:[NSString stringWithFormat:@"Current theme is %@",dataModel.wordType.name]];
     }
 }
 
@@ -201,7 +210,7 @@
     [recordView.view setFrame:CGRectMake(currentTextField.frame.origin.x+currentTextField.frame.size.width-currentTextField.rightView.frame.size.width, currentTextField.frame.origin.y, currentTextField.rightView.frame.size.width, currentTextField.rightView.frame.size.height)];
     recordView.soundType = sounType;
     [recordView setWord:dataModel.currentWord withType:sounType];
-    [UIView beginAnimations:@"MoveAndStrech" contex:nil];
+    [UIView beginAnimations:@"ShowOptionsView" context:nil];
     [UIView setAnimationDuration:0.3];
     [UIView setAnimationBeginsFromCurrentState:YES];
     [recordView.view setFrame:CGRectMake(self.view.superview.center.x-105/2, self.view.superview.center.y-105/2, 105, 105)];
@@ -226,7 +235,8 @@
     [[NSUserDefaults standardUserDefaults] setValue:[NSString stringWithString:_wordType.name] forKey:@"lastThemeInAddView"];
     dataModel.wordType = _wordType;
     [dataModel createWord];
-    [DELEGATE.navigationItem setPrompt:[NSString stringWithFormat:@"Current theme is %@",dataModel.wordType.name]]; 
+    //[DELEGATE.navigationItem setPrompt:[NSString stringWithFormat:@"Current theme is %@",dataModel.wordType.name]]; 
+    [themeLbl setText:[NSString stringWithFormat:@"Current theme is %@",dataModel.wordType.name]];
     if (dataModel.currentWord) {
         [dataModel.currentWord setType:dataModel.wordType];
         [dataModel.currentWord setTypeID:dataModel.wordType.typeID];
@@ -259,18 +269,20 @@
 		[self save];
 	}
 	else if (buttonIndex == 0){
-        if (!editingWord) {
-            [dataModel.wordType removeWordsObject:dataModel.currentWord];
-        }
-        
+        [self removeChanges];
         DELEGATE.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
         [DELEGATE.navigationController popViewControllerAnimated:YES];
 	}
-	else if (buttonIndex == 0){
+	else if (buttonIndex == 2){
 		return;
 	}
 }
 
+- (void)removeChanges{
+    if (!editingWord) {
+        [dataModel.wordType removeWordsObject:dataModel.currentWord];
+    }
+}
 
 - (IBAction) save
 {
@@ -285,7 +297,12 @@
         // [UIAlertView displayMessage:@"Data is saved."];
     }
 	self.flgSave = YES;
-    [self back];
+    //[self back];
+    [UIView beginAnimations:@"SaveButtonAnimation" context:nil];
+    [UIView setAnimationDuration:0.5];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    [saveButton setFrame:CGRectMake(themeButton.center.x,themeButton.center.y,0,0)];
+    [UIView commitAnimations];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
@@ -305,6 +322,13 @@
 
 
 - (void)textFieldDidChange:(UITextField*)textField {
+    [saveButton setFrame:CGRectMake(self.view.frame.size.width/2+11,11,0,0)];
+//    [UIView beginAnimations:@"SButtonAnimation" context:nil];
+//    [UIView setAnimationDuration:0.5];
+//    [UIView setAnimationBeginsFromCurrentState:YES];
+    [saveButton setFrame:CGRectMake(self.view.frame.size.width/2+11,11,self.view.frame.size.width/2-22,37)];
+//    [UIView commitAnimations];
+    
     if ([DELEGATE respondsToSelector:@selector(showWebLoadingView)]) {
         [DELEGATE performSelector:@selector(showWebLoadingView)];
     }
@@ -357,6 +381,9 @@
     [textFld release];
     [translateFid release];
     [dataModel release];
+    [themeLbl release];
+    [saveButton release];
+    [themeButton release];
     [super dealloc];
 }
 @end

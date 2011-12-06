@@ -17,5 +17,6 @@
 - (void)showLastItem;
 - (void)addInfoButton;
 - (void)showInfoView;
+- (void)showWebView;
 
 @end

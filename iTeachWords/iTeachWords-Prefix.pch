@@ -26,6 +26,7 @@
 #import "NSManagedObjectContext+Interaction.h"
 #import "NSArray+Interaction.h"
 #import "NSNumber+Interaction.h"
+#import "NSDate+Interaction.h"
 
 typedef enum {
 	TEXT = 0,
