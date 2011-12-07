@@ -16,7 +16,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        searchedData = [[NSMutableArray alloc]init];
+        self.searchedData = [[NSMutableArray alloc]init];
         limit = 25;
         offset = 10;
         // Custom initialization
@@ -86,7 +86,9 @@
 	NSSortDescriptor *name = [[NSSortDescriptor alloc] initWithKey:@"text" ascending:YES 
                                                           selector:@selector(caseInsensitiveCompare:)];
     self.data = [[[iTeachWordsAppDelegate sharedContext] executeFetchRequest:request error:&error] sortedArrayUsingDescriptors:[NSArray arrayWithObjects:name, nil]];
-    self.searchedData = [NSMutableArray arrayWithArray:self.data];
+    NSLog(@"%d",[searchedData retainCount]);
+    self.searchedData = [NSMutableArray arrayWithArray:data];
+    NSLog(@"%d",[searchedData retainCount]);
 	[table reloadData];
 }
 
@@ -103,7 +105,7 @@
         predicate = [NSPredicate predicateWithFormat:@"text BEGINSWITH[cd] %@", textS];
     }
     NSError *error;
-    NSFetchRequest * request = [[[NSFetchRequest alloc] init] autorelease];
+    NSFetchRequest * request = [NSFetchRequest new];
     [request setEntity:[NSEntityDescription entityForName:@"Words" inManagedObjectContext:[iTeachWordsAppDelegate sharedContext]]];
 //    [request setFetchLimit:limit];  
 //    [request setFetchOffset:offset];
@@ -115,7 +117,11 @@
 	NSSortDescriptor *name = [[NSSortDescriptor alloc] initWithKey:key ascending:YES 
                                                           selector:@selector(caseInsensitiveCompare:)];
     self.data = [[[iTeachWordsAppDelegate sharedContext] executeFetchRequest:request error:&error] sortedArrayUsingDescriptors:[NSArray arrayWithObjects:name, nil]];
-    self.searchedData = [NSMutableArray arrayWithArray:self.data];
+    NSLog(@"%d",[searchedData retainCount]);
+    self.searchedData = [NSMutableArray arrayWithArray:data];
+    NSLog(@"%d",[searchedData retainCount]);
+    [name release];
+    [request release];
 	[table reloadData];
 }
 
@@ -175,7 +181,7 @@
         offset = 5;
         limit = 5;
         if ([searchedText length] > [searchText length]) {
-            self.searchedData = [NSMutableArray arrayWithArray:self.data];
+            self.searchedData = [NSMutableArray arrayWithArray:data];
         }
         [self loadLocalData];
         
@@ -211,9 +217,9 @@
     [cell.textLabel setFont:FONT_TEXT];
     [cell.detailTextLabel setFont:FONT_TEXT];
     if ([mySearchBar.text length] > 0) {
-        ar = self.searchedData;
+        ar = searchedData;
     }else{
-        ar = self.data;
+        ar = data;
     }
     if (indexPath.row < limit-1) {
         Words *word = [ar objectAtIndex:indexPath.row];
@@ -228,7 +234,7 @@
 {
     if (indexPath.row < limit - 1) {
         AddWord *myAddWordView = [[AddWord alloc] initWithNibName:@"AddWord" bundle:nil];
-        [myAddWordView setWord:[searchedData objectAtIndex:indexPath.row]];
+        [myAddWordView setWord:((Words *)[searchedData objectAtIndex:indexPath.row])];
         UIBarButtonItem *newBackButton = [[UIBarButtonItem alloc] initWithTitle: @"Menu" style: UIBarButtonItemStyleBordered target: myAddWordView action:@selector(back)];
         [[self navigationItem] setBackBarButtonItem: newBackButton];
         [self.navigationController pushViewController:myAddWordView animated:YES];

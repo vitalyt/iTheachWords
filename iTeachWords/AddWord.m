@@ -29,9 +29,6 @@
         self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc]
                                                   initWithTitle:@"Back" style:UIBarButtonItemStyleBordered
                                                   target:self action:@selector(back)] autorelease];
-        self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc]
-                                                   initWithBarButtonSystemItem:UIBarButtonSystemItemSave
-                                                   target:self action:@selector(save)] autorelease];
         wordsView = [[AddNewWordViewController alloc] initWithNibName:@"AddNewWordViewController" bundle:nil];
         [wordsView setDelegate:self];
     }
@@ -48,7 +45,6 @@
     [super viewDidLoad];
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"grnd.png"]];
-    self.navigationItem.titleView = (UIView *)myToolbarView;
     [self.view addSubview:wordsView.view];
     [wordsView loadData];
 }
@@ -116,7 +112,7 @@
 - (void)createMenu{
     [self becomeFirstResponder];
     NSMutableArray *menuItemsMutableArray = [NSMutableArray new];
-    UIMenuItem *menuItem = [[[UIMenuItem alloc] initWithTitle:@"use as translate"
+    UIMenuItem *menuItem = [[[UIMenuItem alloc] initWithTitle:@"Use as translate"
                                                        action:@selector(parceTranslateWord)] autorelease];
     [menuItemsMutableArray addObject:menuItem];
     UIMenuController *menuController = [UIMenuController sharedMenuController];

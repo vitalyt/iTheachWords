@@ -198,8 +198,11 @@
 
 - (void)showWebView {
     AddWordWebViewController *webViewController = [[AddWordWebViewController alloc] initWithFrame:self.view.frame];
-    webViewController.url = [NSString stringWithFormat:@"http://www.google.ru"
-                             ];
+    NSString *url = [[NSUserDefaults standardUserDefaults] stringForKey:@"LastUrl"];
+    if(!url){
+        url = @"http://www.google.ru";
+    }
+    webViewController.url = url;
 	[self.navigationController pushViewController:webViewController animated:YES];
 	[webViewController release];
 }

@@ -21,6 +21,8 @@
 #define DEFAULT_RADIUS			8.0f
 #define DEFAULT_BORDERWIDTH		1.0f
 #define DEFAULT_MESSAGEWIDTH	160.0f
+#define DEFAULT_ACTIVITYOFFSET	5.0f
+#define MESSAGE_TAG	4001
 
 @interface UIAlertView (Interaction) 
 
@@ -45,6 +47,27 @@
 		  startScale:(CGFloat)sScale 
 		 middleScale:(CGFloat)mScale 
 			endScale:(CGFloat)eScale;
+
++ (void) showMessage:(NSString *)message
+	   textAlignment:(UITextAlignment)textAlignment
+		withDuration:(NSTimeInterval)duration
+			andDelay:(NSTimeInterval)delay
+	 backgroundColor:(UIColor *)backgroundColor
+		 borderColor:(UIColor *)borderColor
+		 shadowColor:(UIColor *)shadowColor
+   massageOffsetSize:(CGSize)offsetSize
+		 borderWidth:(CGFloat)borderWidth
+		shadowRadius:(CGFloat)shadowRadius
+		cornerRadius:(CGFloat)cornerRadius
+		  startScale:(CGFloat)sScale 
+		 middleScale:(CGFloat)mScale
+			endScale:(CGFloat)eScale
+        activityView:(BOOL)isActivity
+              inView:(UIView*)baseView;
+
++ (void)showLoadingViewWithMwssage:(NSString*)message;
+
++ (void)removeMessage;
 
 + (void) showMessage:(NSString *)message;
 

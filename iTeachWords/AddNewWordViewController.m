@@ -41,7 +41,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self createMenu];
+    if([DELEGATE respondsToSelector:@selector(createMenu)]){
+        [DELEGATE performSelector:@selector(createMenu)];
+    }else{
+        [self createMenu];
+    }
     
     [textFld setDelegate:self];
     [translateFid setDelegate:self];   

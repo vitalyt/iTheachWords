@@ -234,4 +234,112 @@
     
 }
 
++ (void)showLoadingViewWithMwssage:(NSString*)message{
+    [UIAlertView showMessage:message textAlignment:UITextAlignmentCenter withDuration:.0 andDelay:20 backgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:.9f] borderColor:[UIColor grayColor] shadowColor:[UIColor clearColor] massageOffsetSize:CGSizeMake(0, 0) borderWidth:2.5 shadowRadius:DEFAULT_RADIUS cornerRadius:DEFAULT_RADIUS startScale:DEFAULT_STARTSCALE middleScale:DEFAULT_MIDDLESCALE endScale:DEFAULT_ENDSCALE activityView:YES inView:nil];
+}
+
++ (void) showMessage:(NSString *)message
+	   textAlignment:(UITextAlignment)textAlignment
+		withDuration:(NSTimeInterval)duration
+			andDelay:(NSTimeInterval)delay
+	 backgroundColor:(UIColor *)backgroundColor
+		 borderColor:(UIColor *)borderColor
+		 shadowColor:(UIColor *)shadowColor
+   massageOffsetSize:(CGSize)offsetSize
+		 borderWidth:(CGFloat)borderWidth
+		shadowRadius:(CGFloat)shadowRadius
+		cornerRadius:(CGFloat)cornerRadius
+		  startScale:(CGFloat)sScale 
+		 middleScale:(CGFloat)mScale
+			endScale:(CGFloat)eScale
+        activityView:(BOOL)isActivity 
+              inView:(UIView*)baseView
+{
+    if (isActivity) {
+        offsetSize.width = offsetSize.width+20+DEFAULT_ACTIVITYOFFSET;
+    }
+	//Message label
+    UIView* _baseView = ((baseView)?baseView:[[UIApplication sharedApplication] keyWindow]);
+	if ([_baseView viewWithTag:DEFAULT_VIEWTAG] != nil) {
+		return;
+	}
+	UILabel *messageLabel = [[UILabel alloc] init];
+	messageLabel.textAlignment = textAlignment;
+	messageLabel.numberOfLines = 0;
+	messageLabel.lineBreakMode = UILineBreakModeWordWrap;
+	messageLabel.text = message;
+	messageLabel.font = [UIFont fontWithName:DEFAULT_FONTNAME size:DEFAULT_FONTSIZE];
+	messageLabel.textColor = [UIColor DEFAULT_TEXTCOLOR];
+	messageLabel.backgroundColor = [UIColor clearColor];
+	//Message size and rect
+	CGSize messageSize = [message sizeWithFont:messageLabel.font
+							 constrainedToSize:CGSizeMake(DEFAULT_MESSAGEWIDTH, 9999.0f)
+								 lineBreakMode:UILineBreakModeWordWrap];
+	CGRect messageRect = CGRectMake(offsetSize.width + borderWidth + (isActivity)?+25+DEFAULT_ACTIVITYOFFSET*2:0, 
+									offsetSize.height + borderWidth, 
+									messageSize.width, 
+									messageSize.height);
+	messageLabel.frame = messageRect;
+	messageSize.width += offsetSize.width*2.0f + borderWidth;
+	messageSize.height += offsetSize.height*2.0f + borderWidth;
+	messageRect = CGRectMake(0.0f, 0.0f, messageSize.width, messageSize.height);
+    
+	//Message view
+	UIView *content = [[UIView alloc] init];
+	content.frame = messageRect;
+	if (backgroundColor != nil) {
+		content.backgroundColor = backgroundColor;
+	} else {
+		content.backgroundColor = [UIColor colorWithRed:(60.0f/255.0f) green:(60.0f/255.0f) blue:(60.0f/255.0f) alpha:1.0f];
+	}
+	content.alpha = 0.8f;
+	content.layer.cornerRadius = cornerRadius;
+	content.layer.shadowRadius = shadowRadius;
+	content.layer.masksToBounds = NO;
+	content.layer.shadowOffset = CGSizeMake(0.0f, shadowRadius/2.0f);
+	content.layer.shadowOpacity = 1.0f;
+	if (shadowColor != nil) {
+		content.layer.shadowColor = [shadowColor CGColor];
+	}
+	content.layer.borderWidth = borderWidth;
+	if (borderColor != nil) {
+		content.layer.borderColor = [borderColor CGColor];
+	} else {
+		content.layer.borderColor = [[UIColor colorWithRed:(128.0f/255.0f) green:(128.0f/255.0f) blue:(128.0f/255.0f) alpha:1.0f] CGColor];
+	}
+	content.layer.shadowPath = [UIBezierPath bezierPathWithRect:messageRect].CGPath;
+	//Root view
+	UIView *rootView = [[[UIView alloc] init] autorelease];
+	rootView.tag = DEFAULT_VIEWTAG;
+	rootView.frame = messageRect;
+	//Compose views
+	//messageLabel.center = CGPointMake(messageSize.width/2.0f, messageSize.height/2.0f);
+	[content addSubview:messageLabel];
+	[messageLabel release];
+	[rootView addSubview:content];
+	[content release];
+	
+    //ActivityView
+    UIActivityIndicatorView *activityView;
+    if (isActivity) {
+        activityView = [[[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(messageLabel.frame.origin.x-20-DEFAULT_ACTIVITYOFFSET, content.frame.size.height/2-10, 20, 20)] autorelease];
+        [activityView setCenter:CGPointMake(activityView.center.x, activityView.center.y)];
+        [activityView startAnimating];
+        [content addSubview:activityView];
+    }
+    
+	//Animation
+	rootView.center = _baseView.center;
+	[_baseView addSubview:rootView];
+    [_baseView bringSubviewToFront:rootView];    
+}
+
++ (void)removeMessage{
+    if ([[[UIApplication sharedApplication] keyWindow] viewWithTag:DEFAULT_VIEWTAG] != nil) {
+        [[[[UIApplication sharedApplication] keyWindow] viewWithTag:DEFAULT_VIEWTAG] removeFromSuperview];
+    }
+}
+
+
+
 @end

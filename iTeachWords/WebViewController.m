@@ -87,6 +87,7 @@ documentsDirectory = [paths objectAtIndex:0];
     if (![_url hasPrefix:@"http://"]) {
         _url = [NSString stringWithFormat:@"http://%@",_url];
     }
+    [[NSUserDefaults standardUserDefaults] setValue:_url forKey:@"LastUrl"];
     url = [_url retain]; 
     [self loadContent];
 }

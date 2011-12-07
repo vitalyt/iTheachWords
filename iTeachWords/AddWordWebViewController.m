@@ -80,7 +80,7 @@
 - (void)createMenu{
     [self becomeFirstResponder];
     NSMutableArray *menuItemsMutableArray = [NSMutableArray new];
-    UIMenuItem *menuItem = [[[UIMenuItem alloc] initWithTitle:@"add new words"
+    UIMenuItem *menuItem = [[[UIMenuItem alloc] initWithTitle:@"Add new words"
                                                        action:@selector(parceTranslateWord)] autorelease];
     [menuItemsMutableArray addObject:menuItem];
     UIMenuController *menuController = [UIMenuController sharedMenuController];

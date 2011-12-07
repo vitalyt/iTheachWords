@@ -24,7 +24,7 @@
 
 - (void) setWord:(Words *)_word{
     if (currentWord != _word) {
-        currentWord = _word;
+        self.currentWord = _word;
         self.wordType = _word.type;
     }
 }

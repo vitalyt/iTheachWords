@@ -15,7 +15,6 @@
 @interface AddWord : UIViewController <UIWebViewDelegate, UITextFieldDelegate, UIActionSheetDelegate>{
 	IBOutlet UINavigationBar *myNavigationBar;
 	IBOutlet UIWebView		*myWebView;
-    IBOutlet MyUIViewClass  *myToolbarView;
     IBOutlet UIView         *loadWebButtonView;
     
     AddNewWordViewController    *wordsView;
