@@ -16,13 +16,14 @@
 	NSDictionary		*arrayCount;
 }
 
+@property (nonatomic, retain) NSArray *array;
+@property (nonatomic, retain) NSDictionary *arrayCount;
 
 - (IBAction) showTable;
 - (NSString *) loadText;
 - (void) saveText;
 - (void) createMenu;
 - (void) translateText;
+- (void)setText:(NSString*)text;
 
-@property (nonatomic, retain) NSArray *array;
-@property (nonatomic, retain) NSDictionary *arrayCount;
 @end

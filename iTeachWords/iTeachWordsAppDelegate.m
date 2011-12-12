@@ -76,12 +76,12 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     //NSFileManager *fileManager = [NSFileManager defaultManager];
-	NSArray *files =[[NSFileManager defaultManager] contentsOfDirectoryAtPath:DOCUMENTS error:nil];
-	if ([files count]>0) {
-		FilesManagerViewController *progressView = [[FilesManagerViewController alloc] initWithNibName:@"FilesManagerViewController" bundle:nil];
-		[navigationController.view addSubview:progressView.view];
-		[progressView release];
-	}
+//	NSArray *files =[[NSFileManager defaultManager] contentsOfDirectoryAtPath:DOCUMENTS error:nil];
+//	if ([files count]>0) {
+//		FilesManagerViewController *progressView = [[FilesManagerViewController alloc] initWithNibName:@"FilesManagerViewController" bundle:nil];
+//		[navigationController.view addSubview:progressView.view];
+//		[progressView release];
+//	}
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -164,7 +164,7 @@
 
 + (iTeachWordsViewController*) sharedDelegate
 {
-	return [[UIApplication sharedApplication] delegate];
+	return (iTeachWordsViewController*)[[UIApplication sharedApplication] delegate];
 }
 
 - (void) playSound:(NSData *)_data inView:(UIView *)_view{

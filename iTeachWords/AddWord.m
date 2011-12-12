@@ -71,9 +71,7 @@
 		[wordsView save];
 	}
 	else if (buttonIndex == 0){
-        if (!wordsView.editingWord) {
-            [wordsView.dataModel.wordType removeWordsObject:wordsView.dataModel.currentWord];
-        }
+        [wordsView.dataModel.wordType removeWordsObject:wordsView.dataModel.currentWord];
         
         self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
         [self.navigationController popViewControllerAnimated:YES];

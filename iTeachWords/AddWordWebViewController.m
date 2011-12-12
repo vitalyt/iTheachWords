@@ -8,6 +8,7 @@
 
 #import "AddWordWebViewController.h"
 #import "AddNewWordViewController.h"
+#import "TextViewController.h"
 
 @implementation AddWordWebViewController
 
@@ -38,11 +39,15 @@
 */
 
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self createMenu];
+}
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc]
                                                initWithTitle:NSLocalizedString(@"Add word", @"") style:UIBarButtonItemStyleBordered target:self action:@selector(showAddWordView)] autorelease];
     [self addWebView];
@@ -80,11 +85,17 @@
 - (void)createMenu{
     [self becomeFirstResponder];
     NSMutableArray *menuItemsMutableArray = [NSMutableArray new];
-    UIMenuItem *menuItem = [[[UIMenuItem alloc] initWithTitle:@"Add new words"
+    UIMenuItem *menuItem = [[[UIMenuItem alloc] initWithTitle:@"Add word"
                                                        action:@selector(parceTranslateWord)] autorelease];
+    UIMenuItem *menuTextParseItem = [[[UIMenuItem alloc] initWithTitle:@"Parse text"
+                                                                action:@selector(parseText)] autorelease];
+    UIMenuItem *menuTextTranslateItem = [[[UIMenuItem alloc] initWithTitle:@"Translate"
+                                                                action:@selector(translateText)] autorelease];
     [menuItemsMutableArray addObject:menuItem];
+    [menuItemsMutableArray addObject:menuTextParseItem];
+    [menuItemsMutableArray addObject:menuTextTranslateItem];
     UIMenuController *menuController = [UIMenuController sharedMenuController];
-    [menuController setTargetRect: CGRectMake(0, 0, 320, 200)
+    [menuController setTargetRect: self.webView.frame
                            inView:self.view];
     menuController.menuItems = menuItemsMutableArray;
     [menuController setMenuVisible:YES
@@ -100,6 +111,24 @@
     NSString *selectedText = [webView stringByEvaluatingJavaScriptFromString:@"window.getSelection().toString()"];
     [wordsView setText:selectedText];
     [wordsView setTranslate:[selectedText translateString]];
+}
+
+- (void)parseText{
+    NSString *selectedText = [webView stringByEvaluatingJavaScriptFromString:@"window.getSelection().toString()"];
+    if (selectedText.length > 0) {
+        TextViewController *myTextView = [[TextViewController alloc] initWithNibName:@"TextViewController" bundle:nil];
+        [self.navigationController pushViewController:myTextView animated:YES];
+        [myTextView setText:selectedText];
+        [myTextView release];
+    }
+}
+
+-(void) translateText{
+    NSString *selectedText = [webView stringByEvaluatingJavaScriptFromString:@"window.getSelection().toString()"];
+    if (selectedText.length > 0) {
+        NSString* translate = [selectedText translateString];
+        [UIAlertView displayMessage:translate];
+    }
 }
 
 - (void)viewDidUnload

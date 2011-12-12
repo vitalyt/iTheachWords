@@ -2,23 +2,27 @@
 //  WordTypes.m
 //  iTeachWords
 //
-//  Created by Vitaly Todorovych on 5/16/11.
+//  Created by Edwin Zuydendorp on 12/12/11.
 //  Copyright (c) 2011 OSDN. All rights reserved.
 //
 
 #import "WordTypes.h"
+#import "Words.h"
 
 
 @implementation WordTypes
-@dynamic descriptionStr;
-@dynamic name;
-@dynamic createBy;
-@dynamic createDate;
-@dynamic changeBy;
-@dynamic changeDate;
-@dynamic delete;
-@dynamic sorted;
+
 @dynamic typeID;
+@dynamic sorted;
+@dynamic createBy;
+@dynamic changeBy;
+@dynamic delete;
+@dynamic changeDate;
+@dynamic descriptionStr;
+@dynamic createDate;
+@dynamic name;
+@dynamic nativeCountryCode;
+@dynamic translateCountryCode;
 @dynamic words;
 
 - (void)addWordsObject:(NSManagedObject *)value {    

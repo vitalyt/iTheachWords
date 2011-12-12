@@ -45,6 +45,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     myTextView.layer.cornerRadius = radius;
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
 }
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
@@ -138,6 +139,10 @@
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
+}
+
+- (void)setText:(NSString*)text{
+    [myTextView setText:text];
 }
 
 - (void)viewDidUnload {

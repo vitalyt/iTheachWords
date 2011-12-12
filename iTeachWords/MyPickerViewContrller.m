@@ -28,9 +28,11 @@
 }
 
 - (void) loadData{    
+    NSPredicate * predicate = [NSPredicate predicateWithFormat:@"nativeCountryCode = %@ && translateCountryCode = %@",[[NSUserDefaults standardUserDefaults] objectForKey:NATIVE_COUNTRY_CODE], [[NSUserDefaults standardUserDefaults] objectForKey:TRANSLATE_COUNTRY_CODE]];
+    NSLog(@"%@",predicate);
     NSFetchedResultsController *fetches = [NSManagedObjectContext 
-                                           getEntities:@"WordTypes" sortedBy:@"createDate" withPredicate:nil];
-	
+                                           getEntities:@"WordTypes" sortedBy:@"createDate" withPredicate:predicate];
+    
 	NSSortDescriptor *date = [[NSSortDescriptor alloc] initWithKey:@"createDate" ascending:NO];
 	NSArray *companies = [fetches fetchedObjects];
 	self.data = [companies sortedArrayUsingDescriptors:[NSArray arrayWithObjects:date, nil]];
@@ -40,7 +42,7 @@
     NSString *lastTheme  = [[NSUserDefaults standardUserDefaults] objectForKey:@"lastTheme"];
     if (lastTheme){
         int i = 0;
-        for (WordTypes *types in self.data) {
+        for (WordTypes *types in data) {
             if ([types.name isEqualToString:lastTheme]){
                 [pickerView selectRow:i inComponent:0 animated:YES];
                 [self pickerView:pickerView didSelectRow:i inComponent:0];
@@ -81,9 +83,7 @@
     CATransition *myTransition = [CATransition animation];
 	myTransition.timingFunction = UIViewAnimationCurveEaseInOut;
 	myTransition.type =kCATransitionFade; 
-	//myTransition.subtype = kCATransitionPush;
 	myTransition.duration = 0.3;
-	//[self.view.layer addAnimation:myTransition forKey:nil]; 
 	[self.view.superview.layer addAnimation:myTransition forKey:nil];
 	[self.view removeFromSuperview];
     if (self.delegate && [self.delegate respondsToSelector:@selector(pickerWillCansel)]) {
@@ -140,12 +140,10 @@
     [myTextField becomeFirstResponder];
     
     [rightButton setAction:@selector(saveNewTheme)];
-    //[rightButton setStyle:UIBarButtonItemStyleDone];
     [rightButton setTitle:@"Add"];
     
     [leftButton setAction:@selector(closeAddView)];
-    //[leftButton setTitle:@"Close"];
-    [leftButton setStyle:UIBarButtonSystemItemCancel];
+    [leftButton setStyle:UIBarButtonItemStyleBordered];
 	
 	[myTextField.layer addAnimation:myTransition forKey:nil];
 	myTextField.hidden = NO;
@@ -191,6 +189,8 @@
         wordType = [NSEntityDescription insertNewObjectForEntityForName:@"WordTypes" 
                                                 inManagedObjectContext:CONTEXT];
         [wordType setName:typeName];
+        [wordType setNativeCountryCode:[[[NSUserDefaults standardUserDefaults] objectForKey:NATIVE_COUNTRY_CODE] uppercaseString]];
+        [wordType setTranslateCountryCode:[[[NSUserDefaults standardUserDefaults] objectForKey:TRANSLATE_COUNTRY_CODE] uppercaseString]];
         [wordType setCreateDate:[NSDate date]];
         if (![CONTEXT save:&error]) {
             [UIAlertView displayError:@"There is problem with saving data."];
@@ -263,7 +263,7 @@
 
 
 - (void)dealloc {
-	//[delegate release];
+	delegate = nil;
 	[pickerView release];
 	[data release];
     [super dealloc];

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SearchTableViewController.h"
 
-@interface DictionaryViewController : SearchTableViewController {
+@interface DictionaryViewController : SearchTableViewController <UIScrollViewDelegate> {
     NSMutableArray *searchedData;
     NSString *searchedText;
 }

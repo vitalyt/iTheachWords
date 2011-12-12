@@ -147,8 +147,7 @@
     path = [path stringByAppendingPathComponent:@"Documents"];
     path = [path stringByAppendingPathComponent:[NSString stringWithString:fhash]];
     
-    NSMutableDictionary *hashDB;    
-    NSFileManager *fileMgr = [NSFileManager defaultManager];
+    NSMutableDictionary *hashDB;
     hashDB = [NSMutableDictionary dictionaryWithContentsOfFile:pathOfHashDB];
 
 //	if ([BluetoothRegistrationSystemAppDelegate isNetwork] && hashDB && [hashDB objectForKey:fhash] &&  ![self validDate:[[hashDB objectForKey:fhash] objectForKey:@"createDate"]]) {

@@ -38,15 +38,21 @@
 
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     if([DELEGATE respondsToSelector:@selector(createMenu)]){
         [DELEGATE performSelector:@selector(createMenu)];
     }else{
         [self createMenu];
     }
-    
+}
+- (void)viewDidLoad
+{    
+    if([DELEGATE respondsToSelector:@selector(createMenu)]){
+        [DELEGATE performSelector:@selector(createMenu)];
+    }else{
+        [self createMenu];
+    }
     [textFld setDelegate:self];
     [translateFid setDelegate:self];   
     [textFld setFont:FONT_TEXT];
@@ -227,11 +233,10 @@
 - (IBAction) showMyPickerView{
     [translateFid resignFirstResponder];
     [textFld resignFirstResponder];
-    if (myPicker) {
-        [myPicker release];
+    if (!myPicker) {
+        myPicker = [[MyPickerViewContrller alloc] initWithNibName:@"MyPicker" bundle:nil];
+        myPicker.delegate = self;
     }
-    myPicker = [[MyPickerViewContrller alloc] initWithNibName:@"MyPicker" bundle:nil];
-	myPicker.delegate = self;
     [myPicker openViewWithAnimation:DELEGATE.navigationController.view];
 }
 
@@ -283,9 +288,7 @@
 }
 
 - (void)removeChanges{
-    if (!editingWord) {
-        [dataModel.wordType removeWordsObject:dataModel.currentWord];
-    }
+    [dataModel.wordType removeWordsObject:dataModel.currentWord];
 }
 
 - (IBAction) save
@@ -299,6 +302,8 @@
         [UIAlertView displayError:@"Data is not saved."];
     }else{
         // [UIAlertView displayMessage:@"Data is saved."];
+        dataModel.currentWord = nil;
+        [dataModel createWord];
     }
 	self.flgSave = YES;
     //[self back];
@@ -368,7 +373,10 @@
     NSMutableArray *menuItemsMutableArray = [NSMutableArray new];
     UIMenuItem *menuItem = [[[UIMenuItem alloc] initWithTitle:@"use as translate"
                                                        action:@selector(parceTranslateWord)] autorelease];
+    UIMenuItem *menuTextParseItem = [[[UIMenuItem alloc] initWithTitle:@"Parse text"
+                                                                action:@selector(parseText)] autorelease];
     [menuItemsMutableArray addObject:menuItem];
+    [menuItemsMutableArray addObject:menuTextParseItem];
     UIMenuController *menuController = [UIMenuController sharedMenuController];
     [menuController setTargetRect: CGRectMake(0, 0, 320, 200)
                            inView:self.view];
@@ -381,6 +389,9 @@
 
 
 - (void)dealloc {
+    if (myPicker) {
+        [myPicker release];
+    }
     delegate = nil;
     [textFld release];
     [translateFid release];

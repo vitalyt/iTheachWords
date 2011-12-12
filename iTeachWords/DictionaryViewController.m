@@ -234,7 +234,8 @@
 {
     if (indexPath.row < limit - 1) {
         AddWord *myAddWordView = [[AddWord alloc] initWithNibName:@"AddWord" bundle:nil];
-        [myAddWordView setWord:((Words *)[searchedData objectAtIndex:indexPath.row])];
+        Words *currentWord = ((Words *)[searchedData objectAtIndex:indexPath.row]);
+        [myAddWordView setWord:currentWord];
         UIBarButtonItem *newBackButton = [[UIBarButtonItem alloc] initWithTitle: @"Menu" style: UIBarButtonItemStyleBordered target: myAddWordView action:@selector(back)];
         [[self navigationItem] setBackBarButtonItem: newBackButton];
         [self.navigationController pushViewController:myAddWordView animated:YES];
@@ -250,5 +251,7 @@
     }
 }
 
-
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    [mySearchBar resignFirstResponder];
+}
 @end

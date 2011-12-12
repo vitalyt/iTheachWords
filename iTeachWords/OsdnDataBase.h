@@ -12,9 +12,6 @@
 @interface OsdnDataBase : OSDNHash {
 
 }
-+ (BOOL) validDate:(NSDate *)dateTest;
-+ (void) removeAllHash;
-+ (void) removeHash;
 + (NSData *) loadBaseWithURL:(NSString *)_url;
 + (NSString *) loadWebBaseWithURL:(NSString *)_url;
 + (void)addBaseWithURL:(NSString *)_url data:(NSData *)_data;

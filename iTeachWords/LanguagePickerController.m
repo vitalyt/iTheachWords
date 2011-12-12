@@ -195,6 +195,8 @@
 - (void)done{
     NSDictionary *dict = [content objectAtIndex:[pickerView selectedRowInComponent:0]];
     NSLog(@"%@",[dict  objectForKey:@"code"]);
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"lastTheme"];
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"lastThemeInAddView"];
     [[NSUserDefaults standardUserDefaults] setValue:[dict  objectForKey:@"code"] forKey:NATIVE_COUNTRY_CODE];
     [[NSUserDefaults standardUserDefaults] setValue:[dict  objectForKey:@"country"] forKey:NATIVE_COUNTRY];
     dict = [content objectAtIndex:[pickerView selectedRowInComponent:1]];

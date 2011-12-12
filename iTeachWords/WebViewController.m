@@ -60,6 +60,10 @@ documentsDirectory = [paths objectAtIndex:0];
     [progressView removeFromSuperview];   
 }  
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+}
 
 -(void)viewDidLoad 
 {
@@ -75,6 +79,8 @@ documentsDirectory = [paths objectAtIndex:0];
 	[self.view insertSubview:webView belowSubview:toolbar];
     [self.view bringSubviewToFront:urlToolbar];
     [self loadContent];
+    
+    [urlFld setText:url];
 }
 
 - (void)setUrl:(NSString *)_url{
@@ -89,6 +95,7 @@ documentsDirectory = [paths objectAtIndex:0];
     }
     [[NSUserDefaults standardUserDefaults] setValue:_url forKey:@"LastUrl"];
     url = [_url retain]; 
+    [urlFld setText:url];
     [self loadContent];
 }
 

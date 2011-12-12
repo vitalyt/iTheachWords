@@ -36,6 +36,7 @@
 - (void) checkDatabase;
 + (NSManagedObjectContext *) sharedContext;
 + (iTeachWordsViewController *) sharedDelegate;
+- (NSManagedObjectContext *) managedObjectContext;
 + (NSDictionary *)sharedSettings;
 + (NSDictionary *)loadLanguageSettings;
 

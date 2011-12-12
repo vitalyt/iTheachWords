@@ -29,12 +29,10 @@
     }
 }
 
-
 - (void) createWord{
     if (!currentWord) {
         self.currentWord = [NSEntityDescription insertNewObjectForEntityForName:@"Words" 
                                                     inManagedObjectContext:CONTEXT];
-        [wordType addWordsObject:currentWord];
         [currentWord setCreateDate:[NSDate date]];
     }
     [currentWord setChangeDate:[NSDate date]];

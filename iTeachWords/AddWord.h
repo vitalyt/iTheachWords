@@ -10,7 +10,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <CoreAudio/CoreAudioTypes.h>
 
-@class MyUIViewClass,AddNewWordViewController;
+@class MyUIViewClass,AddNewWordViewController,Words;
 
 @interface AddWord : UIViewController <UIWebViewDelegate, UITextFieldDelegate, UIActionSheetDelegate>{
 	IBOutlet UINavigationBar *myNavigationBar;
@@ -31,4 +31,5 @@
 - (void)showWebLoadingView;
 - (void)setText:(NSString*)text;
 - (void)setTranslate:(NSString*)text;
+- (void)setWord:(Words *)_word;
 @end
