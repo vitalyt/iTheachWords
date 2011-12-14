@@ -58,7 +58,7 @@
 
 - (void)viewDidUnload {
     for (int i=0;i<2;i++){
-        
+        int k=0;
     }
     
     // Relinquish ownership of anything that can be recreated in viewDidLoad or on demand.
