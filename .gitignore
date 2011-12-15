@@ -1,2 +1,3 @@
-.bundle
+build/*
+iTeachWords.xcodeproj/*
 .DS_Store
