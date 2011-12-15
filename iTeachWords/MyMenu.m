@@ -59,10 +59,7 @@
 - (void)viewDidUnload {
     for (int i=0;i<2;i++){
         int k=0;
-<<<<<<< HEAD
-=======
-        //ddddddddd
->>>>>>> master
+        //ddddddddd my_code_exrperiment
         //In new branch without error
     }
     
